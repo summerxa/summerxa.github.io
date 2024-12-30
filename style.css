@@ -1,3 +1,10 @@
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body {
     font-family: courier;
 }
@@ -9,12 +16,15 @@ h1 {
 
 .project-btn {
     display: inline;
+    padding: 0px;
+    /* background-color: transparent; */
+    outline: none !important;
 }
 
 .project-container {
     position: relative;
     align-items: center;
-    display:flex;
+    display: flex;
 }
 
 .project-image {
@@ -25,16 +35,17 @@ h1 {
     height: auto;
 }
 
-.project-overlay {
-    display: block;
-    background-color: lightskyblue; /* lightblue = UI color */
-    align-items: center;
-    position: absolute;
-    font-family: courier;
-}
-
-.project-overlay:hover {
-    opacity: 0.5;
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-self: center;
+    align-self: center;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .gallery-image {

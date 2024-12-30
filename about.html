@@ -3,34 +3,33 @@
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    html {
+        background: rgb(21, 21, 79); 
+    }
+</style>
 <body>
 
-<a href="index.html">Back</a>
+<div class="content">
+    <a href="index.html">Back</a>
 
-<h1>About Me</h1>
+    <h1>About Me</h1>
 
-<p>Computer science student passionate about ML/AI and software development.
-    Experience in ML/AI and mobile app development, fluent in multiple programming languages.
-    Proven ability to communicate ideas effectively, lead groups, and quickly pick up new skills for projects.</p>
+    <p>Computer science student passionate about ML/AI and software development.
+        Experience in ML/AI and mobile app development, fluent in multiple programming languages.
+        Proven ability to communicate ideas effectively, lead groups, and quickly pick up new skills for projects.</p>
 
-<div id="image-gallery"></div>
+    <div id="image-gallery"></div>
+</div>
 
 </body>
 
+<script src="script.js"></script>
 <script>
 const images = [
 ];
 
-const galleryContainer = document.getElementById("image-gallery");
-
-images.forEach(image => {
-    const imgElement = document.createElement("img");
-    imgElement.src = image.src;
-    imgElement.alt = image.alt;
-    imgElement.classList.add("gallery-image");
-
-    galleryContainer.appendChild(imgElement);
-});
+buildGallery(images);
 </script>
 
 </html>

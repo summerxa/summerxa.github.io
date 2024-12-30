@@ -3,30 +3,43 @@
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    html {
+        background: rgb(21, 21, 79); 
+    }
+</style>
 <body>
 
-<h1>Anne Xia</h1>
+<div class="content">
+    <h1>Anne Xia</h1>
 
-<p><em>This is a big work in progress lol</em></p>
+    <p><em>Click on a project to view more:</em></p>
 
-<div id="project-div">
-    <button class="project-btn" onclick="onProjectClicked('critterworld.html')">
-        <div class="project-container">
-            <div class="project-overlay">
-                Critter World
+    <div id="project-div">
+        <button class="project-btn" onclick="onProjectClicked('critterworld.html')">
+            <div class="project-container">
+                <img class="project-image" src="img/critterworld/critter_0.png"/>
             </div>
-            <img class="project-image" src="img/critterworld/critter_0.png"/>
-        </div>
-    </button>
+        </button>
+        <button class="project-btn" onclick="onProjectClicked('timekeeper.html')">
+            <div class="project-container">
+                <img class="project-image" src="img/timekeeper/tk_0.png"/>
+            </div>
+        </button>
+        <button class="project-btn" onclick="onProjectClicked('alphabet.html')">
+            <div class="project-container">
+                <img class="project-image" src="img/hand.jpg"/>
+            </div>
+        </button>
+        <button class="project-btn" onclick="onProjectClicked('about.html')">
+            <div class="project-container">
+                <img class="project-image" src="img/aboutme.png"/>
+            </div>
+        </button>
+    </div>
+
+    </body>
 </div>
-
-
-<a href="critterworld.html">Critter World</a>
-<a href="timekeeper.html">Time Keeper</a>
-<a href="alphabet.html">Alphabet Interpreter</a>
-<a href="about.html">About Me</a>
-
-</body>
 
 <script>
 function onProjectClicked(url) {

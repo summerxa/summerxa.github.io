@@ -3,77 +3,81 @@
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    html {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/critterworld/critter_0.png) no-repeat center center fixed; 
+    }
+</style>
 <body>
 
-<a href="index.html">Back</a>
+<div class="content">
 
-<h1>Critter World: Simulating Evolving Artificial Life</h1>
-<p><em>Fall 2024</em></p>
+    <a href="index.html">Back</a>
+    <h1>Critter World: Simulating Evolving Artificial Life</h1>
+    <p><em>Fall 2024</em></p>
 
-<p>Created by Anne Xia, Carrie Chen, Haohuan Li, and Francis Lau at Cornell University. Final project for
-    <a href="https://courses.cs.cornell.edu/cs2112/2024fa/">CS 2112: Object-Oriented Design and Data Structures Honors</a>,
-    taught in Java by Professor Andrew Myers for Fall 2024.</p>
+    <p>Created by Anne Xia, Carrie Chen, Haohuan Li, and Francis Lau at Cornell University. Final project for
+        <a href="https://courses.cs.cornell.edu/cs2112/2024fa/">CS 2112: Object-Oriented Design and Data Structures Honors</a>,
+        taught in Java by Professor Andrew Myers for Fall 2024.</p>
 
-<p>The goal of this project was to simulate critters (animals) on a hexagonal grid world. Critters can perform various actions,
-    such as moving, eating food on the grid, or reproducing. Each critter contains a program, which is the language
-    that determines what action the critter takes at each time step.
-</p>
+    <p>The goal of this project was to simulate critters (animals) on a hexagonal grid world. Critters can perform various actions,
+        such as moving, eating food on the grid, or reproducing. Each critter contains a program, which is the language
+        that determines what action the critter takes at each time step.
+    </p>
 
-<p>
-    To achieve this goal, we used recursive descent parsing to convert programs into abstract syntax tree representations, which
-    could then be evaluated to determine critter behavior. We used the model-view-controller design pattern to ensure separation of concerns,
-    and this allowed us to first test our parsing and simulation using the console before moving everything to a finished GUI application. For
-    our GUI app, we used JavaFX to build the base app and CSS for styling. Finally, we used multithreading to ensure smooth performance within the app
-    even while a simulation was running in the background.
-</p>
+    <p>
+        To achieve this goal, we used recursive descent parsing to convert programs into abstract syntax tree representations, which
+        could then be evaluated to determine critter behavior. We used the model-view-controller design pattern to ensure separation of concerns,
+        and this allowed us to first test our parsing and simulation using the console before moving everything to a finished GUI application. For
+        our GUI app, we used JavaFX to build the base app and CSS for styling. Finally, we used multithreading to ensure smooth performance within the app
+        even while a simulation was running in the background.
+    </p>
 
-<p>
-For more details, the project specifications are as follows:
-</p>
-<ul>
-    <li><a href="https://courses.cs.cornell.edu/cs2112/2024fa/project/project.pdf?1732124197">Project specification</a></li>
-    <li><a href="https://courses.cs.cornell.edu/cs2112/2024fa/project/grammar.txt">Critter program grammar</a></li>
-    <li><a href="https://courses.cs.cornell.edu/cs2112/2024fa/project/example-critter.txt">Sample critter program</a></li>
-</ul>
+    <p>
+    For more details, the project specifications are as follows:
+    </p>
+    <ul>
+        <li><a href="https://courses.cs.cornell.edu/cs2112/2024fa/project/project.pdf?1732124197">Project specification</a></li>
+        <li><a href="https://courses.cs.cornell.edu/cs2112/2024fa/project/grammar.txt">Critter program grammar</a></li>
+        <li><a href="https://courses.cs.cornell.edu/cs2112/2024fa/project/example-critter.txt">Sample critter program</a></li>
+    </ul>
 
-<div id="image-gallery"></div>
+    <div id="image-gallery"></div>
+</div>
 
 </body>
 
+<script src="script.js"></script>
 <script>
 const images = [
     {
         "src": "img/critterworld/critter_0.png",
-        "alt": "Image 1 Description"
+        "alt": "Screenshot of a GUI application.",
+        "txt": "The main window of our GUI application. The map on the left represents a hexagonal grid world, with white hexes (cells) being empty space and gray ones being obstacles (critters and food cannot spawn or move onto them). The circles are critters, with each color representing a different species. We chose to add eyes to the critters and represent food as hamburgers because it would be immediately clear to the user what each icon is meant to represent."
     },
     {
         "src": "img/critterworld/critter_1.png",
-        "alt": "Image 2 Description"
+        "alt": "Screenshot of the same application with an additional left sidebar open.",
+        "txt": "The world can be zoomed in/out using the buttons on the bottom right of the map. Clicking on a hex with a critter will highlight the critter and display relevant information, such as its current stats and its program."
     },
     {
         "src": "img/critterworld/critter_2.gif",
-        "alt": "Image 3 Description"
+        "alt": "Animation of a user dragging to scroll the app.",
+        "txt": "Demonstration of our map's scrolling feature."
     },
     {
         "src": "img/critterworld/critter_3.gif",
-        "alt": "Image 4 Description"
+        "alt": "Animation of the app while a simulation is running at low speed.",
+        "txt": "A simulation of a small world with three critters. Each critter contains an identical program which uses Dijkstra's algorithm to detect and move towards the nearest food. The simulation runs at 5 steps per second."
     },
     {
         "src": "img/critterworld/critter_4.gif",
-        "alt": "Image 5 Description"
+        "alt": "Animation of the app while a simulation is running at high speed.",
+        "txt": "A simulation of a small world with three critters. Each critter contains an identical program which uses Dijkstra's algorithm to detect and move towards the nearest food. The simulation speed is set to 100 steps per second, but due to hardware constraints, the actual speed is around 25 steps per second, a statistic which is displayed in the bottom of the right panel."
     }
 ];
 
-const galleryContainer = document.getElementById("image-gallery");
-
-images.forEach(image => {
-    const imgElement = document.createElement("img");
-    imgElement.src = image.src;
-    imgElement.alt = image.alt;
-    imgElement.classList.add("gallery-image");
-
-    galleryContainer.appendChild(imgElement);
-});
+buildGallery(images);
 </script>
 
 </html>
