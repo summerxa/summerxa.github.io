@@ -1,8 +1,48 @@
 body {
-    background-color: lightblue;
+    font-family: courier;
 }
 
 h1 {
     color: navy;
     margin-left: 20px;
+}
+
+.project-btn {
+    display: inline;
+}
+
+.project-container {
+    position: relative;
+    align-items: center;
+    display:flex;
+}
+
+.project-image {
+    display: inline;
+    max-width:400px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+}
+
+.project-overlay {
+    display: block;
+    background-color: lightskyblue; /* lightblue = UI color */
+    align-items: center;
+    position: absolute;
+    font-family: courier;
+}
+
+.project-overlay:hover {
+    opacity: 0.5;
+}
+
+.gallery-image {
+    display: inline-block;
+    max-width:400px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    /* border: 1px solid #ccc; */
 }

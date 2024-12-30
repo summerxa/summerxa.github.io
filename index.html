@@ -5,19 +5,33 @@
 </head>
 <body>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<h1>Anne Xia</h1>
+<p>Computer science student passionate about ML/AI and software development.
+    Experience in ML/AI and mobile app development, fluent in multiple programming languages.
+    Proven ability to communicate ideas effectively, lead groups, and quickly pick up new skills for projects.</p>
+
+<div id="project-div">
+    <button class="project-btn" onclick="onProjectClicked('critterworld.html')">
+        <div class="project-container">
+            <div class="project-overlay">
+                Critter World
+            </div>
+            <img class="project-image" src="img/critterworld/critter_0.png"/>
+        </div>
+    </button>
+</div>
+
+
+<a href="critterworld.html">Critter World</a>
+<a href="timekeeper.html">Time Keeper</a>
+<a href="alphabet.html">Alphabet Interpreter</a>
 
 </body>
 
 <script>
-
-const div = document.createElement("div");
-
-function createProjectBtn() {
-    // TODO
+function onProjectClicked(url) {
+    window.location = url;
 }
-
 </script>
 
 </html>

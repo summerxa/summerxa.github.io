@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="index.html">Back</a>
+
+<h1>Time Keeper</h1>
+<p><em>Jan 2024-Present</em></p>
+
+<p>
+Producer: Annabel Luo
+<br/>
+Game designers: Annabel Luo, Anne Xia
+<br/>
+Writers: Annabel Luo and Jacey Shuieh
+<br/>
+Artists: Annabel Luo (UI/Character/Cutscene), Yuwen Zhang (Character/Cutscene), Joyce Wang (Environment), Naomi Tsang (UI/Character)
+<br/>
+Programmers: Anne Xia, Jacey Shuieh
+<br/>
+Sound designer: Matthew Liu
+</p>
+
+<p>A time management and choice-based narrative game, currently in beta testing process.</p>
+
+<p>I was in charge of implementing all the time management gameplay and the custom UI & menus, which was done in Python.</p>
+
+</body>
+
+<div id="image-gallery"></div>
+
+<script>
+const images = [
+    {
+        "src": "img/timekeeper/tk_0.png",
+        "alt": "Image 1 Description"
+    },
+    {
+        "src": "img/timekeeper/tk_1.png",
+        "alt": "Image 2 Description"
+    },
+    {
+        "src": "img/timekeeper/tk_2.png",
+        "alt": "Image 3 Description"
+    },
+    {
+        "src": "img/timekeeper/tk_3.png",
+        "alt": "Image 4 Description"
+    },
+    {
+        "src": "img/timekeeper/tk_4.gif",
+        "alt": "Image 5 Description"
+    },
+    {
+        "src": "img/timekeeper/tk_5.gif",
+        "alt": "Image 6 Description"
+    }
+];
+
+const galleryContainer = document.getElementById("image-gallery");
+
+images.forEach(image => {
+    const imgElement = document.createElement("img");
+    imgElement.src = image.src;
+    imgElement.alt = image.alt;
+    imgElement.classList.add("gallery-image");
+
+    galleryContainer.appendChild(imgElement);
+});
+</script>
+
+</html>
