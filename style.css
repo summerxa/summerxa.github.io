@@ -76,6 +76,7 @@ hr {
     width: auto;
     height: auto;
     margin: 10px;
+    vertical-align: middle;
     border: 1px solid #000;
 }
 
