@@ -5,34 +5,61 @@
 </head>
 <style>
     html {
+        /* background: linear-gradient(rgb(227, 208, 102), rgb(189, 143, 16)); */
         background: rgb(21, 21, 79); 
     }
 </style>
 <body>
 
-<div class="content">
-    <a href="index.html">Back</a>
-
-    <h1>Alphabet Interpreter</h1>
-    <p><em>Jun-Aug 2023</em></p>
-
-    <p>Created by Anne Xia as an independent project.</p>
-
-    <p>Android app written in Java, utilizes AI to identify ASL alphabet signs from live camera feed.</p>
-
-    <p>Training data was various photos of hands taken from online databases. Model connected OpenCV, MediaPipe, and 4-layer fully-connected neural network
-        and was trained to classify hand gesture images as letters.
-       Used Python to train and test model, integrated final model into mobile app.
-    </p>
-
-    <p><a href="https://github.com/summerxa/asl-ai-app">GitHub link</a></p>
-
-    <div id="image-gallery"></div>
-
-    </body>
+<div id="image-view">
+    <div style="display:flex; padding:6px; width:75%; justify-content: center;">
+        <image id="image-view-img" src="img/critterworld/critter_0.png"/>
+    </div>
+    <div style="display: flex; flex-direction:column; width: 25%; float:right; padding: 6px; justify-content: space-around; gap: 10px">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; height: 6%">
+            <button class="image-btn" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label">Image 1/5</p>
+            <button class="image-btn" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
 </div>
 
-<script src="script.js"></script>
+<div class="container">
+<div class="content">
+    <div class="content1">
+        <a href="index.html">Back</a>
+    </div>
+    <div class="content1">
+
+        <h1>Alphabet Interpreter</h1>
+        <p><em>Jun-Aug 2023</em></p>
+
+        <p>Created by Anne Xia as an independent project.</p>
+
+        <p>Android app written in Java, utilizes AI to identify ASL alphabet signs from live camera feed.</p>
+
+        <p>Training data used photos of hand gestures taken from online databases. Model connected OpenCV, MediaPipe, and 4-layer fully-connected neural network
+            and was trained to classify hand gesture images as letters.
+        Used Python to train and test model, integrated final model into mobile app.
+        </p>
+
+        <p><a href="https://github.com/summerxa/asl-ai-app">GitHub link</a></p>
+
+        <div id="image-gallery"></div>
+    </div>
+</div>
+</div>
+
+</body>
+
+<script src="gallery_script.js"></script>
 <script>
 const images = [
 ];

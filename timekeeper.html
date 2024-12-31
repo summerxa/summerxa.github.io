@@ -7,70 +7,107 @@
     html {
         background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/timekeeper/tk_0.png) no-repeat center center fixed; 
     }
+
+    .image-btn {
+        background-color: rgb(255, 226, 63);
+        color: rgb(81, 56, 0);
+    }
 </style>
 <body>
 
+<div id="image-view">
+    <div style="display:flex; padding:6px; width:75%; justify-content: center;">
+        <image id="image-view-img" src="img/critterworld/critter_0.png"/>
+    </div>
+    <div style="display: flex; flex-direction:column; width: 25%; float:right; padding: 6px; justify-content: space-around; gap: 10px">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; height: 6%">
+            <button class="image-btn" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label">Image 1/5</p>
+            <button class="image-btn" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
 <div class="content">
-    <a href="index.html">Back</a>
+    <div class="content1">
+        <a href="index.html">Back</a>
+    </div>
+    <div class="content1">
 
-    <h1>Time Keeper</h1>
-    <p><em>Jan 2024-Present</em></p>
+        <h1>Time Keeper</h1>
+        <p><em>Jan 2024-Present</em></p>
 
-    <p>
-    Producer: Annabel Luo
-    <br/>
-    Game designers: Annabel Luo, Anne Xia
-    <br/>
-    Writers: Annabel Luo, Jacey Shuieh
-    <br/>
-    Artists: Annabel Luo (UI/Character/Cutscene), Yuwen Zhang (Character/Cutscene), Joyce Wang (Environment), Naomi Tsang (UI/Character)
-    <br/>
-    Programmers: Anne Xia, Jacey Shuieh
-    <br/>
-    Sound designer: Matthew Liu
-    </p>
+        <p>
+        Producer: Annabel Luo
+        <br/>
+        Game designers: Annabel Luo, Anne Xia
+        <br/>
+        Writers: Annabel Luo, Jacey Shuieh
+        <br/>
+        Artists: Annabel Luo (UI/Character/Cutscene), Yuwen Zhang (Character/Cutscene), Joyce Wang (Environment), Naomi Tsang (UI/Character)
+        <br/>
+        Programmers: Anne Xia, Jacey Shuieh
+        <br/>
+        Sound designer: Matthew Liu
+        </p>
 
-    <p>A time management and choice-based narrative game, currently in beta testing process.</p>
+        <p>A time management and choice-based narrative game, currently in beta testing process.</p>
 
-    <p>I was in charge of implementing all the time management gameplay and the custom UI & menus, which was done in Python.</p>
+        <p>I was in charge of implementing all the time management gameplay and the custom UI & menus, which was done in Python.</p>
 
-    <div id="image-gallery"></div>
+        <div id="image-gallery"></div>
+    </div>
+</div>
 </div>
 
 </body>
 
-<script src="script.js"></script>
+<script src="gallery_script.js"></script>
 <script>
 const images = [
     {
         "src": "img/timekeeper/tk_0.png",
         "alt": "Screenshot of the game's main menu.",
-        "txt": "The main menu of the game."
+        "txt": "The main menu of the game.",
+        "i": 0
     },
     {
         "src": "img/timekeeper/tk_1.png",
         "alt": "Screenshot of the game's timeline menu.",
-        "txt": "Due to the choice-based nature of the game's narrative, we wanted to include a way for players to easily see what content they have unlocked so far. This is one of three progress menus in the game, featuring a scrollable branching timeline, nodes that show plot summary when hovered and fullscreen cutscenes when clicked, and a zoom bar (on far right). Scenes not yet reached by the player are grayed out with a lock icon."
+        "txt": "Due to the choice-based nature of the game's narrative, we wanted to include a way for players to easily see what content they have unlocked so far. This is one of three progress menus in the game and features a scrollable branching timeline, nodes that show plot summary when hovered and fullscreen cutscenes when clicked, and a zoom bar (on far right). Scenes not yet reached by the player are grayed out with a lock icon. Not pictured here are the other two progress menus, which consist of image galleries that show plot details or cutscenes when clicked.",
+        "i": 1
     },
     {
         "src": "img/timekeeper/tk_2.png",
         "alt": "Screenshot of a top-down map with buttons on the left sidebar.",
-        "txt": "The menu for the time management gameplay, representing a top-down view of a map. Each furniture item on the map is interactable when clicked, and clicking the correct ones will progress the game and narrative. The buttons on the left sidebar opens various menus that help guide the player, and the clock indicates the player's remaining time. On the top right, we included progress bars that fill as the player advances, which helps the player track their current performance. The tooltip on the bottom left provides various hints for the player depending on their gameplay actions."
+        "txt": "The menu for the time management gameplay, representing a top-down view of a map. Each furniture item on the map is interactable when clicked, and clicking the correct ones will progress the game and narrative. The buttons on the left sidebar open various menus that help guide the player, and the clock indicates the player's remaining time. On the top right, we included progress bars that fill as the player advances, which helps the player track their current performance. The tooltip on the bottom right provides different hints to the player depending on their gameplay actions.",
+        "i": 2
     },
     {
         "src": "img/timekeeper/tk_3.png",
         "alt": "Screenshot of a menu that resembles a notebook.",
-        "txt": "One of the menus opened from the buttons on the left sidebar. This one in particular provides instructions for gameplay, and displays tasks the player must complete to accumulate points and progress the game."
+        "txt": "One of the menus for the time management gameplay. This one in particular provides instructions for the game, and displays tasks the player must complete to accumulate points and progress the game.",
+        "i": 3
     },
     {
         "src": "img/timekeeper/tk_4.gif",
         "alt": "Animation of a color sorting minigame.",
-        "txt": "A color sorting minigame from the time management gameplay."
+        "txt": "A color sorting minigame from the time management gameplay.",
+        "i": 4
     },
     {
         "src": "img/timekeeper/tk_5.gif",
         "alt": "Animation of a drag-and-drop minigame.",
-        "txt": "A drag-and-drop minigame from the time management gameplay. The game will automatically exit back to the main menu once a minigame is completed."
+        "txt": "A drag-and-drop minigame from the time management gameplay. The game will automatically exit back to the main menu once a minigame is completed (indicated by the fade to black).",
+        "i": 5
     }
 ];
 

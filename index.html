@@ -5,41 +5,49 @@
 </head>
 <style>
     html {
+        /* background: linear-gradient(rgb(255, 208, 98), rgb(74, 74, 198)); */
         background: rgb(21, 21, 79); 
     }
 </style>
 <body>
 
+<div class="container">
 <div class="content">
-    <h1>Anne Xia</h1>
+    <div class="content1" style="max-height: 95%; padding: 2px">
+        <div style="display: flex; gap: 20px; align-items: baseline;">
+            <h1>Anne Xia</h1>
+            <h5><a href="mailto:anne.xia6@gmail.com">Email</a> | <a href="https://github.com/summerxa">GitHub</a></h5>
+        </div>
+        
+        <p>Computer science student passionate about ML/AI and software development.
+            Experience in ML/AI and mobile app development, fluent in multiple programming languages.
+            Proven ability to communicate ideas effectively, lead groups, and quickly pick up new skills for projects.</p>
 
-    <p><em>Click on a project to view more:</em></p>
+        <p>Click on a project to view more:</p>
 
-    <div id="project-div">
-        <button class="project-btn" onclick="onProjectClicked('critterworld.html')">
-            <div class="project-container">
-                <img class="project-image" src="img/critterworld/critter_0.png"/>
-            </div>
-        </button>
-        <button class="project-btn" onclick="onProjectClicked('timekeeper.html')">
-            <div class="project-container">
-                <img class="project-image" src="img/timekeeper/tk_0.png"/>
-            </div>
-        </button>
-        <button class="project-btn" onclick="onProjectClicked('alphabet.html')">
-            <div class="project-container">
-                <img class="project-image" src="img/hand.jpg"/>
-            </div>
-        </button>
-        <button class="project-btn" onclick="onProjectClicked('about.html')">
-            <div class="project-container">
-                <img class="project-image" src="img/aboutme.PNG"/>
-            </div>
-        </button>
+        <div id="project-div">
+            <button class="project-btn" onclick="onProjectClicked('critterworld.html')">
+                <div class="project-container">
+                    <img class="project-image" src="img/critterworld/critter_0.png"/>
+                </div>
+            </button>
+            <button class="project-btn" onclick="onProjectClicked('timekeeper.html')">
+                <div class="project-container">
+                    <img class="project-image" src="img/timekeeper/tk_0.png"/>
+                </div>
+            </button>
+            <button class="project-btn" onclick="onProjectClicked('alphabet.html')">
+                <div class="project-container">
+                    <img class="project-image" src="img/hand.jpg"/>
+                </div>
+            </button>
+        </div>
     </div>
 
-    </body>
 </div>
+</div>
+
+</body>
 
 <script>
 function onProjectClicked(url) {

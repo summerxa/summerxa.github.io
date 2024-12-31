@@ -2,11 +2,14 @@ html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover !important;
+    height: 100%;
 }
 
 body {
     font-family: courier;
+    height: 100%;
+    margin: 0px;
 }
 
 h1 {
@@ -14,14 +17,18 @@ h1 {
     margin-left: 20px;
 }
 
+hr {
+    max-width: 50%;
+    color: black;
+}
+
 .project-btn {
-    display: inline;
+    border: 1px;
     padding: 0px;
-    /* background-color: transparent; */
-    outline: none !important;
 }
 
 .project-container {
+    margin: 0px;
     position: relative;
     align-items: center;
     display: flex;
@@ -33,19 +40,33 @@ h1 {
     max-height:200px;
     width: auto;
     height: auto;
+    outline: 1px solid #000;
+}
+
+.container {
+    /* padding: 6px; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
     justify-self: center;
     align-self: center;
     width: 50%;
-    height: 50%;
-    overflow: auto;
+    max-height: 90%;
     background-color: white;
     border-radius: 10px;
+}
+
+.content1 {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 90%;
+    overflow: auto;
 }
 
 .gallery-image {
@@ -55,5 +76,34 @@ h1 {
     width: auto;
     height: auto;
     margin: 10px;
-    /* border: 1px solid #ccc; */
+    border: 1px solid #000;
+}
+
+#image-view {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position:absolute;
+    justify-self: center;
+    align-self: center;
+    display:flex;
+    justify-content: space-between;
+}
+
+#image-view-img {
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+}
+
+.image-btn {
+    width: 10%;
+    border: none;
+    box-shadow: none;
+    font-family: courier;
+    font-weight: bold;
+    border-radius: 5px;
 }
