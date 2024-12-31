@@ -5,8 +5,12 @@
 </head>
 <style>
     html {
-        /* background: linear-gradient(rgb(227, 208, 102), rgb(189, 143, 16)); */
-        background: rgb(21, 21, 79); 
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/alphabet/alpha_l.png) no-repeat center center fixed;
+    }
+    
+    .image-btn {
+        background-color: rgb(255, 190, 60);
+        color: rgb(97, 65, 0);
     }
 </style>
 <body>
@@ -62,6 +66,30 @@
 <script src="gallery_script.js"></script>
 <script>
 const images = [
+    {
+        "src": "img/alphabet/alpha_a.png",
+        "alt": "Screenshot of the app with a hand signing the letter A.",
+        "txt": "The app recognizes this hand gesture as the letter A, with other possible candidates listed below as Y and T.",
+        "i": 0
+    },
+    {
+        "src": "img/alphabet/alpha_d.png",
+        "alt": "Screenshot of the app with a hand signing the letter D.",
+        "txt": "The app recognizes this hand gesture as the letter D, with other possible candidates listed below as I and R.",
+        "i": 1
+    },
+    {
+        "src": "img/alphabet/alpha_l.png",
+        "alt": "Screenshot of the app with a hand signing the letter L.",
+        "txt": "The app recognizes this hand gesture as the letter L, with other possible candidates listed below as T and X.",
+        "i": 2
+    },
+    {
+        "src": "img/alphabet/alpha_0.png",
+        "alt": "The app icon, an orange background image with a white clipart of a hand.",
+        "txt": "The icon for the app, which is used in the launcher and while the app is loading.",
+        "i": 3
+    }
 ];
 
 buildGallery(images);
