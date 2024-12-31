@@ -38,6 +38,10 @@ function updateImageView(idx) {
     
     const lab = document.getElementById('image-view-label');
     lab.textContent = "Image " + (idx+1) + "/" + images.length;
+
+    // img.classList.remove("image-view-img-ani");
+    // void img.offsetWidth;
+    // img.classList.add("image-view-img-ani");
 }
 
 function onGalleryClicked(idx) {
@@ -46,6 +50,10 @@ function onGalleryClicked(idx) {
     updateImageView(idx);
 
     imageView.style.display = "";
+
+    const img = document.getElementById('image-view-img');
+    img.classList.remove("image-view-img-ani");
+    img.classList.add("image-view-img-ani");
 }
 
 function onCloseClicked() {
@@ -53,12 +61,24 @@ function onCloseClicked() {
 }
 
 function onLeftClicked() {
+    const btn = document.getElementById("left");
+
+    btn.classList.remove("image-btn-ani");
+    void btn.offsetWidth;
+    btn.classList.add("image-btn-ani");
+
     image_idx = (image_idx + images.length - 1) % images.length;
 
     updateImageView(image_idx);
 }
 
 function onRightClicked() {
+    const btn = document.getElementById("right");
+
+    btn.classList.remove("image-btn-ani");
+    void btn.offsetWidth;
+    btn.classList.add("image-btn-ani");
+
     image_idx = (image_idx+1) % images.length;
 
     updateImageView(image_idx);

@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+<title>Time Keeper | Anne Xia</title>
 </head>
 <style>
     html {
@@ -21,16 +22,16 @@
     </div>
     <div style="display: flex; flex-direction:column; width: 25%; float:right; padding: 6px; justify-content: space-around; gap: 10px">
         <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
-            <button class="image-btn" onclick="onCloseClicked()">X</button>
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
         </div>
         <div style="overflow: auto; height: 90%">
             <p id="image-view-txt">text
             </p>
         </div>
         <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; height: 6%">
-            <button class="image-btn" onclick="onLeftClicked()">&lt;</button>
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
             <p id="image-view-label">Image 1/5</p>
-            <button class="image-btn" onclick="onRightClicked()">&gt;</button>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
         </div>
     </div>
 </div>
