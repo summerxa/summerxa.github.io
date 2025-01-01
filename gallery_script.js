@@ -49,7 +49,7 @@ function onGalleryClicked(idx) {
     
     updateImageView(idx);
 
-    imageView.style.display = "";
+    imageView.style.display = "flex";
 
     const img = document.getElementById('image-view-img');
     img.classList.remove("image-view-img-ani");
@@ -85,9 +85,9 @@ function onRightClicked() {
 }
 
 const imageView = document.getElementById("image-view");
-console.log("test");
-if (imageView) {
-    imageView.style.display="none";
-}
+// console.log("test");
+// if (imageView) {
+//     imageView.style.display="none";
+// }
 
 var image_idx = 0;

@@ -87,7 +87,8 @@ hr {
     position:absolute;
     justify-self: center;
     align-self: center;
-    display:flex;
+    /* display:flex; */
+    display: none;
     justify-content: space-between;
 }
 
