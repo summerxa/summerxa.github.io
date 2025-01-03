@@ -17,10 +17,10 @@
 <body>
 
 <div id="image-view">
-    <div style="display:flex; padding:6px; width:75%; justify-content: center;">
+    <div id="image-view-img-container">
         <image id="image-view-img" src="img/critterworld/critter_0.png"/>
     </div>
-    <div style="display: flex; flex-direction:column; width: 25%; float:right; padding: 6px; justify-content: space-around; gap: 10px">
+    <div id="image-view-text">
         <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
             <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
         </div>
@@ -28,7 +28,7 @@
             <p id="image-view-txt">text
             </p>
         </div>
-        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; height: 6%">
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between;  align-items:center; height: 6%">
             <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
             <p id="image-view-label">Image 1/5</p>
             <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
