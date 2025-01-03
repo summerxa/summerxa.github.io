@@ -38,13 +38,14 @@
 
 <div class="container">
 <div class="content">
-    <div class="content1">
+    <div class="content1 back">
         <a href="index.html">Back</a>
     </div>
-    <div class="content1">
+    <div class="content1 internal">
 
         <h1>Time Keeper</h1>
         <p><em>Jan 2024-Present</em></p>
+        <!-- <p><em>Jan 2024-Present</em> | Python, Game development, UI </p> -->
 
         <p>
         Producer: Annabel Luo
@@ -59,10 +60,38 @@
         <br/>
         Sound designer: Matthew Liu
         </p>
-
+        
         <p>A time management and choice-based narrative game, currently in beta testing process.</p>
 
-        <p>I was in charge of implementing all the time management gameplay and the custom UI & menus, which was done in Python.</p>
+        <div>
+            <p>
+            My main contributions:
+                <ul>
+                    <li>Implemented all the time management gameplay and the custom UI & menus.</li>
+                    <li>Designed and implemented custom code structures in Python to extend game engine's limited API.</li>
+                    <li>Designed features for time management gameplay.</li>
+                    <li>Communicated regularly with team members to ensure integration of gameplay with visuals and story.</li>
+                </ul>
+            </p>
+        </div>
+
+        <hr style="width:100%">
+
+        <p>
+            Navigate the life of a doll-like maid named Anastasia as she serves multiple clients and gets acquainted with her fellow maids.
+            Whether she'll remain cold or slowly warm up to her emotions will depend on your choices.
+            As a maid, she must manage her time wisely to complete all the tasks given by clients.
+        </p>
+
+        <p>
+            The time-management gameplay is integrated with the narrative. Players must allocate their in-game time between navigating the map and
+            completing various tasks to increase their score in three separate categories. The goal is to earn a high enough score in all three categories
+            (indicated in game by a filled-in progress bar) within the time limit.
+            As a challenge, the game tracks players' actions and will gradually decrease the final score if too much in-game time elapses without
+            completing a task.
+            In addition, certain tasks contain cutscenes that progress the narrative; to ensure that the player will always reach these scenes,
+            we deactivated all other tasks until the narrative was completed.
+        </p>
 
         <div id="image-gallery"></div>
     </div>
@@ -89,19 +118,19 @@ const images = [
     {
         "src": "img/timekeeper/tk_2.png",
         "alt": "Screenshot of a top-down map with buttons on the left sidebar.",
-        "txt": "The main menu for the time management gameplay, representing a top-down view of a map. Each furniture item on the map is interactable when clicked, and clicking the correct ones will progress the game and narrative. The buttons on the left sidebar open various menus that help guide the player, and the clock indicates the player's remaining time. On the top right, we included progress bars that fill as the player advances, which helps the player track their current performance. The tooltip on the bottom right provides different hints to the player depending on their gameplay actions.",
+        "txt": "The main menu for the time management gameplay, representing a top-down view of a map. Each furniture item on the map is interactable when clicked, and clicking the correct ones will progress the game and narrative. The buttons on the left sidebar open various menus that help guide the player, and the clock indicates the player's remaining time. On the top right, we included progress bars (one for each score category) that fill as the player advances, which helps the player track their current performance. The tooltip on the bottom right provides different hints to the player depending on their gameplay actions.",
         "i": 2
     },
     {
         "src": "img/timekeeper/tk_3.png",
         "alt": "Screenshot of a menu that resembles a notebook.",
-        "txt": "One of the menus for the time management gameplay. This one in particular provides instructions for the game, and displays tasks the player must complete to accumulate points and progress the game.",
+        "txt": "One of the menus for the time management gameplay. This one in particular provides instructions for the game, and displays tasks the player must complete to accumulate points and progress the game. Each task includes a location, the time needed to complete it, a brief description of the task gameplay, and three numbers representing the points gained towards each category upon completing the task. \"Priority Tasks\" are narrative scenes that must be viewed for the game to progress.",
         "i": 3
     },
     {
         "src": "img/timekeeper/tk_4.gif",
         "alt": "Animation of a color sorting minigame.",
-        "txt": "A color sorting minigame from the time management gameplay.",
+        "txt": "A color sorting minigame from the time management gameplay. Players can return to a specific task as many times as they like within the time limit, so I made all minigames randomly generate their starting state to encourage replayability. I chose this option over creating a batch of fixed puzzles, as the alternative would cause tasks to become tedious for repeat players.",
         "i": 4
     },
     {

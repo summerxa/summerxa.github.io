@@ -38,21 +38,39 @@
 
 <div class="container">
     <div class="content">
-        <div class="content1">
+        <div class="content1 back">
             <a href="index.html">Back</a>
         </div>
-        <div class="content1">
+        <div class="content1 internal">
             <h1>Critter World: Simulating Evolving Artificial Life</h1>
             <p><em>Fall 2024</em></p>
+            <!-- <p><em>Fall 2024</em> | Java, UI, Multithreading, MVC </p> -->
 
             <p>Created by Anne Xia, Carrie Chen, Haohuan Li, and Francis Lau at Cornell University. Final project for
                 <a href="https://courses.cs.cornell.edu/cs2112/2024fa/">CS 2112: Object-Oriented Design and Data Structures Honors</a>,
                 taught in Java by Professor Andrew Myers for Fall 2024.</p>
 
-            <p>The goal of this project was to simulate critters (animals) on a hexagonal grid world. Critters can perform various actions,
-                such as moving, eating food on the grid, or reproducing. Each critter contains a program, which is the language
-                that determines what action the critter takes at each time step.
+            <p>
+                A GUI app that simulates an ecosystem as it evolves in real-time.
             </p>
+
+            <div>
+                <p>
+                My main contributions:
+                    <ul>
+                        <li>Architect code using model-view-controller design pattern.</li>
+                        <li>Implement designs and write unit tests to verify correctness.</li>
+                        <li>Write all UI, including interactive map, and multithreading with background model.</li>
+                        <li>Organize team discussions and troubleshooting sessions.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <hr style="width:100%">
+
+            <p>The goal of this project was to critters (animals) on a hexagonal grid world. Critters can perform various actions,
+                such as moving, eating food on the grid, or reproducing. Each critter contains a program, which is the language
+                that determines what action the critter takes at each time step.</p>
 
             <p>
                 To achieve this goal, we used recursive descent parsing to convert programs into abstract syntax tree representations, which
@@ -86,7 +104,7 @@ const images = [
     {
         "src": "img/critterworld/critter_0.png",
         "alt": "Screenshot of a GUI application.",
-        "txt": "The main window of our GUI application. The map on the left represents a hexagonal grid world, with white hexes (cells) being empty space and gray ones being obstacles (critters and food cannot spawn or move onto them). The circles are critters, with each color representing a different species. We chose to add eyes to the critters and represent food as hamburgers because it would be immediately clear to the user what each icon is meant to represent.",
+        "txt": "The main window of our GUI application. The map on the left represents a hexagonal grid world, with white hexes (cells) being empty space and gray ones being obstacles (critters and food cannot spawn or move onto them). The circles are critters, with each color representing a different species. We chose to add eyes to the critters and represent food as hamburgers to increase visual appeal, as well as making it immediately clear to the user what each icon is meant to represent.",
         "i": 0
     },
     {
