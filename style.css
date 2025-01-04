@@ -154,6 +154,10 @@ hr {
     max-height: 92%;
 }
 
+.content1.internal.index {
+    max-height: 100%;
+}
+
 .gallery-image {
     display: inline-block;
     max-width:400px;
