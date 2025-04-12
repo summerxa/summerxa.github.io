@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>The Scarcity Line | Anne Xia</title>
+</head>
+<style>
+    html {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/scarcityline/line_BG.png) no-repeat center center fixed; 
+    }
+
+    .image-btn {
+        background-color: #bad7ce;
+        color: #2c3331;
+    }
+</style>
+<body>
+
+<div id="image-view">
+    <div id="image-view-img-container">
+        <image id="image-view-img"/>
+    </div>
+    <div id="image-view-text">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; align-items:center; height: 6%">
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label">Image 1/5</p>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="content">
+    <div class="content1 back">
+        <a href="index.html">Back</a>
+    </div>
+    <div class="content1 internal">
+
+        <div style="display: flex; gap: 20px; align-items: baseline;">
+            <h1>The Scarcity Line</h1>
+            <h5><a href="https://axl012.itch.io/thescarcityline">Playable on itch.io</a></h5>
+        </div>
+        <p><em>Mar-Apr 2025</em></p>
+        
+        <p>
+        Game design: Hanwen Liu, Annabel Luo
+        <br/>
+        Art: Ziya Tang, Annabel Luo
+        <br/>
+        Programming: Anne Xia, Hanwen Liu, Annabel Luo
+        </p>
+
+        <p>A 2D puzzle and narrative game, developed for the
+            <a href="https://gamesforchange.org/studentchallenge/">Games for Change Student Challenge 2025</a>.</p>
+
+        
+
+        <hr style="width:100%">
+
+        <p>
+            In a city where the powerful feast and the poor starve, you’re the last hope.
+            As the new food bank president, you see the truth. What starts as a mission to help quickly uncovers deep corruption;
+            food hoarded by the powerful while vulnerable communities suffer. Carefully pack nutritious meals from limited supplies.
+            Secretly deliver food to the starving, forging bonds and risking exposure.
+            This emotionally driven strategy game challenges you to confront the global crisis of hunger and waste,
+            and asks: how far would you go to make sure no meal or person is forgotten?
+        </p>
+
+        <div id="image-gallery"></div>
+    </div>
+</div>
+</div>
+
+</body>
+
+<script src="gallery_script.js"></script>
+<script>
+const images = [
+    {
+        "src": "img/scarcityline/line_0.png",
+        "alt": "Screenshot of the puzzle minigame.",
+        "txt": "The minigame I worked on, which teaches players to balance nutrition through a block-fitting puzzle.",
+        "i": 0
+    },
+    {
+        "src": "img/scarcityline/line_1.png",
+        "alt": "Screenshot of the puzzle minigame tutorial.",
+        "txt": "The tutorial for the puzzle consisted of multiple \"slides\", one of which is shown here.",
+        "i": 1
+    },
+    {
+        "src": "img/scarcityline/line_1andahalf.png",
+        "alt": "Screenshot of the puzzle minigame with a line of hint text on the screen.",
+        "txt": "When the player attempts to move onto the next level without completing the current level objective, they receive a hint as feedback.",
+        "i": 2
+    },
+    {
+        "src": "img/scarcityline/line_2hint1.png",
+        "alt": "Screenshot of the puzzle minigame's hint feature, with a half-visible hint block on the grid.",
+        "txt": "To prevent players from being stuck for too long, I implemented a hint button that gives the player a solution, one block at a time. In this example, a half-transparent block is shown at the position where the player should drag an actual block.",
+        "i": 3
+    },
+    {
+        "src": "img/scarcityline/line_2hint2.png",
+        "alt": "Screenshot of the puzzle minigame's hint feature, with a line of hint text off to the side.",
+        "txt": "To prevent players from being stuck for too long, I implemented a hint button that gives the player a solution, one block at a time. In this example, the player is prompted to remove one of the blocks on the grid that is taking up space.",
+        "i": 4
+    },
+    {
+        "src": "img/scarcityline/line_3.png",
+        "alt": "Screenshot of the puzzle minigame.",
+        "txt": "A harder level in the game, featuring more block variants and a larger grid. Here, the player is dragging a block with a fish icon onto the grid. I added text labels above each food block when clicked. This way, the player engages more closely with the nutrition and healthy-eating themes by learning what each block represents.",
+        "i": 5
+    }
+];
+
+buildGallery(images);
+</script>
+
+</html>
