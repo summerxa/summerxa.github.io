@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Function Dungeon | Anne Xia</title>
+</head>
+<style>
+    html {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/functiondungeon/func_0.png) no-repeat center center fixed;
+    }
+
+    .image-btn {
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+
+<div id="image-view">
+    <div id="image-view-img-container">
+        <image id="image-view-img"/>
+    </div>
+    <div id="image-view-text">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; align-items:center; height: 6%">
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label">Image 1/5</p>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <div class="content1 back">
+            <a href="index.html">Back</a>
+        </div>
+        <div class="content1 internal">
+            <div style="display: flex; gap: 20px; align-items: baseline;">
+                <h1>Function Dungeon</h1>
+                <h4><a href="https://github.com/PaulTsemingFischer/FunctionDungeon">Code on GitHub</a> |
+                <a href="https://pages.github.coecis.cornell.edu/cs3110/gallery-2025sp/">Showcase</a> |
+                <a href="https://www.youtube.com/watch?v=FfrpSSiHGa4">Video demo</a></h4>
+            </div>
+            <p><em>Spring 2025</em></p>
+
+            <p>Created by Ryan Qiu, Anne Xia, Paul Fischer, and Michaela Eichel at Cornell University. Final project for
+                <a href="https://www.cs.cornell.edu/courses/cs3110/2025sp/">CS 3110: Data Structures and Functional Programming</a>,
+                taught in OCaml by Professor Anshuman Mohan for Spring 2025.</p>
+
+            <p>
+                A procedurally generated dungeon-crawling game written in OCaml, a functional programming language.
+            </p>
+
+            <div>
+                <p>
+                My main contributions:
+                    <ul>
+                        <li>Implement code designs and write unit tests to verify correctness.</li>
+                        <li>Design and implement player attack patterns and power-ups, ensuring it connects smoothly with teammates' code.</li>
+                        <li>Communicate regularly with group to ensure on-time delivery of code.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <hr style="width:100%">
+
+            <p>Players explore randomly generated rooms, so each play-through is unique.
+                Battle enemies of varying strengths, manage your resources, and collect power-ups to help you explore the map.
+                Standard keyboard input is supported, and the game is displayed with custom GUI.</p>
+
+            <hr style="width:100%">
+
+            <div id="image-gallery"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="gallery_script.js"></script>
+<script>
+const images = [
+    {
+        "src": "img/functiondungeon/func_0.png",
+        "alt": "Screenshot of the game.",
+        "txt": "An average playthrough of the game. The map is rendered using colored ASCII symbols, with \"@\" representing the player. Blue circles represent enemy attack ranges, and the letter at the center of each circle is an enemy. Magenta letters represent random power-ups that the player can pick up. The map also contains various types of procedurally-generated terrain, such as water (blue), lava (orange), and walls (#).",
+        "i": 0
+    }
+];
+
+buildGallery(images);
+</script>
+
+</html>
