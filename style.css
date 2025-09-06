@@ -69,7 +69,7 @@ hr {
         width: 100%;
         height: 100%;
         background-color: white;
-        position:absolute;
+        /* position:absolute; */
         justify-self: center;
         align-self: center;
         /* display:flex; */
