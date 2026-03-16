@@ -38,10 +38,6 @@ function updateImageView(idx) {
     
     const lab = document.getElementById('image-view-label');
     lab.textContent = "Image " + (idx+1) + "/" + images.length;
-
-    // img.classList.remove("image-view-img-ani");
-    // void img.offsetWidth;
-    // img.classList.add("image-view-img-ani");
 }
 
 function onGalleryClicked(idx) {
@@ -85,9 +81,5 @@ function onRightClicked() {
 }
 
 const imageView = document.getElementById("image-view");
-// console.log("test");
-// if (imageView) {
-//     imageView.style.display="none";
-// }
 
 var image_idx = 0;
