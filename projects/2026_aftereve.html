@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../style.css">
+<title>After Eve | Anne Xia</title>
+</head>
+<style>
+    html {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2026_aftereve/AE_bg.jpg) no-repeat center center fixed; 
+    }
+
+    .image-btn {
+        background-color: #494bb9;
+        color: #e2e3ea;
+    }
+</style>
+<body>
+
+<div id="image-view">
+    <div id="image-view-img-container">
+        <image id="image-view-img"/>
+    </div>
+    <div id="image-view-text">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; align-items:center; height: 6%">
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label">Image 1/5</p>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="content">
+    <div class="content1 back">
+        <a href="../index.html">Back</a>
+    </div>
+    <div class="content1 internal">
+
+        <div style="display: flex; gap: 20px; align-items: baseline;">
+            <h1>After Eve</h1>
+            <h4><a href="https://axl012.itch.io/thescarcityline">TODO gameplay link</a></h4>
+        </div>
+        <p><em>Sep 2026-TODO end date</em></p>
+        
+        <p>
+        TODO credits here..
+        </p>
+
+        <p>A 2D bullet hell roguelite and narrative game.</p>
+
+        <div>
+            <p>
+            My main contributions:
+                <ul>
+                    <li>Architect and implement several key systems, including optimized management of real-time status effects,
+                        a full inventory and shop system, and gameplay cycle integrated with narrative.
+                        Created an easy-to-understand and extensible system for future gameplay features.</li>
+                    <li>Coordinate regularly with designers and other programmers to ensure smooth integration of each feature
+                        and maintain an organized codebase.</li>
+                    <li>Attend art and narrative design meetings, providing regular updates about the behavior of specific gameplay
+                        features and ensuring assets could be feasibly implemented in game.</li>
+                </ul>
+            </p>
+        </div>
+
+        <hr style="width:100%">
+
+        <p>
+            TODO game premise here...
+        </p>
+
+        <p>
+            Among other features (which are too involved to describe in a single paragraph),
+            I was responsible for implementing the main roguelite gameplay cycle, in which a player would start a new run,
+            potentially triggering dialogue according to their story progress, and then traverse through a fixed number of
+            rooms before completing the current run. To achieve this, I would need to consolidate and combine the code for
+            individual gameplay features from other programmers. While doing so, I communicated with the team members
+            responsible for each part of the game to ensure combining or adding new features did not cause any regressions
+            in existing functionality.
+        </p>
+
+        <p>
+            This was the largest game project/team I had worked on so far, so a decent portion of my work involved
+            coordinating with other programmers and explaining my implementations and design decisions at weekly meetings.
+
+            In addition to meeting with the programming team, I attended art and narrative design meetings, providing regular
+            updates about how specific features were implemented in game and what assets were needed from the other teams.
+        </p>
+
+        <div id="image-gallery"></div>
+    </div>
+</div>
+</div>
+
+</body>
+
+<script src="../gallery_script.js"></script>
+<script>
+const images = [
+    {
+        "src": "../img/2026_aftereve/AE_bg.jpg",
+        "alt": "After Eve game banner.",
+        "txt": "The banner of the game.", // TODO: delete this img later. just for testing button colors lol
+        "i": 0
+    }
+];
+
+buildGallery(images);
+</script>
+
+</html>
