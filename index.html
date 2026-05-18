@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<script src="page_transition.js" defer></script>
-<title>Anne Xia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="page_transition.js" defer></script>
+    <title>Anne Xia</title>
 </head>
 <style>
     html {
-        /* background: linear-gradient(rgb(255, 208, 98), rgb(74, 74, 198)); */
-        background: rgb(21, 21, 79); 
+        background:
+            radial-gradient(circle at top left, rgba(143, 198, 255, 0.22), transparent 32rem),
+            linear-gradient(135deg, #101827 0%, #1e2d44 52%, #263d45 100%);
     }
 </style>
 <body>
@@ -16,48 +19,65 @@
 <div class="container">
 <div class="homepage_content">
     <div class="content1 internal index">
-        <div style="display: flex; gap: 20px; align-items: baseline;">
-            <h1>Anne Xia</h1>
-            <h4><a href="https://github.com/summerxa">GitHub</a> |
-                <a href="https://www.linkedin.com/in/anne-xia-556b30326/">LinkedIn</a></h4>
+        <div class="hero-header">
+            <div>
+                <p class="eyebrow">Hi, I'm</p>
+                <h1>Anne Xia</h1>
+            </div>
+            <nav class="social-links" aria-label="Profile links">
+                <a href="https://github.com/summerxa">GitHub</a>
+                <a href="https://www.linkedin.com/in/anne-xia-556b30326/">LinkedIn</a>
+            </nav>
         </div>
         
-        <p>Computer science student passionate about ML/AI and software development.
+        <p class="intro">Computer science student passionate about ML/AI and software development.
             Experience in ML/AI and web/app development, fluent in multiple programming languages.
             Proven ability to communicate ideas effectively, lead groups, and quickly pick up new skills for projects.</p>
 
-        <p>Click on a project to learn more:</p>
+        <p class="section-label">Selected projects</p>
 
         <div id="project-div">
-            <button class="project-btn" onclick="onProjectClicked('projects/2026_aftereve.html')">
-                <div class="project-container">
-                    <img class="project-image" src="img/2026_aftereve/AE_cover.jpg"/>
-                </div>
+            <button class="project-btn" onclick="onProjectClicked('projects/2026_aftereve.html')" aria-label="Open After Eve project">
+                <img class="project-image" src="img/2026_aftereve/AE_cover.jpg" alt="After Eve game banner">
+                <span class="project-info">
+                    <span class="project-title">After Eve</span>
+                    <span class="project-meta">Unity, C#, Game development</span>
+                </span>
             </button>
-            <button class="project-btn" onclick="onProjectClicked('projects/2025_functiondungeon.html')">
-                <div class="project-container">
-                    <img class="project-image" src="img/2025_functiondungeon/func_0.png"/>
-                </div>
+            <button class="project-btn" onclick="onProjectClicked('projects/2025_functiondungeon.html')" aria-label="Open Function Dungeon project">
+                <img class="project-image" src="img/2025_functiondungeon/func_0.png" alt="Function Dungeon gameplay screenshot">
+                <span class="project-info">
+                    <span class="project-title">Function Dungeon</span>
+                    <span class="project-meta">OCaml</span>
+                </span>
             </button>
-            <button class="project-btn" onclick="onProjectClicked('projects/2025_scarcityline.html')">
-                <div class="project-container">
-                    <img class="project-image" src="img/2025_scarcityline/line_cover.png"/>
-                </div>
+            <button class="project-btn" onclick="onProjectClicked('projects/2025_scarcityline.html')" aria-label="Open The Scarcity Line project">
+                <img class="project-image" src="img/2025_scarcityline/line_cover.png" alt="The Scarcity Line cover art">
+                <span class="project-info">
+                    <span class="project-title">The Scarcity Line</span>
+                    <span class="project-meta">Unity, C#, Game development</span>
+                </span>
             </button>
-            <button class="project-btn" onclick="onProjectClicked('projects/2024_critterworld.html')">
-                <div class="project-container">
-                    <img class="project-image" src="img/2024_critterworld/critter_0.png"/>
-                </div>
+            <button class="project-btn" onclick="onProjectClicked('projects/2024_critterworld.html')" aria-label="Open Critter World project">
+                <img class="project-image" src="img/2024_critterworld/critter_0.png" alt="Critter World GUI screenshot">
+                <span class="project-info">
+                    <span class="project-title">Critter World</span>
+                    <span class="project-meta">Java, UI, Multithreading, MVC</span>
+                </span>
             </button>
-            <button class="project-btn" onclick="onProjectClicked('projects/2024_timekeeper.html')">
-                <div class="project-container">
-                    <img class="project-image" src="img/2024_timekeeper/tk_0.png"/>
-                </div>
+            <button class="project-btn" onclick="onProjectClicked('projects/2024_timekeeper.html')" aria-label="Open Time Keeper project">
+                <img class="project-image" src="img/2024_timekeeper/tk_0.png" alt="Time Keeper main menu">
+                <span class="project-info">
+                    <span class="project-title">Time Keeper</span>
+                    <span class="project-meta">Python, Game development & design</span>
+                </span>
             </button>
-            <button class="project-btn" onclick="onProjectClicked('projects/2022_alphabet.html')">
-                <div class="project-container">
-                    <img class="project-image" src="img/2022_alphabet/alpha_d.png"/>
-                </div>
+            <button class="project-btn" onclick="onProjectClicked('projects/2022_alphabet.html')" aria-label="Open Alphabet Interpreter project">
+                <img class="project-image" src="img/2022_alphabet/alpha_d.png" alt="Alphabet Interpreter app screenshot">
+                <span class="project-info">
+                    <span class="project-title">Alphabet Interpreter</span>
+                    <span class="project-meta">Java, Python, ML, Android dev</span>
+                </span>
             </button>
         </div>
     </div>

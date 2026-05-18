@@ -3,7 +3,7 @@ function buildGallery(images) {
 
     if (images.length != 0) {
         galleryContainer.appendChild(document.createElement("hr"));
-        galleryContainer.appendChild(document.createTextNode("Click an image to view details:"))
+        galleryContainer.appendChild(document.createTextNode("Click an image to view details:"));
     }
 
     const imageContainer = document.createElement("div");
@@ -12,10 +12,20 @@ function buildGallery(images) {
         const imgElement = document.createElement("img");
         imgElement.src = image.src;
         imgElement.alt = image.alt;
+        imgElement.tabIndex = 0;
+        imgElement.setAttribute("role", "button");
+        imgElement.setAttribute("aria-label", "View details for " + image.alt);
         imgElement.classList.add("gallery-image");
 
         imgElement.addEventListener("click", function() {
             onGalleryClicked(image.i);
+        });
+
+        imgElement.addEventListener("keydown", function(event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                onGalleryClicked(image.i);
+            }
         });
 
         imageContainer.appendChild(imgElement);
@@ -25,9 +35,9 @@ function buildGallery(images) {
 }
 
 function updateImageView(idx) {
-    url = images[idx].src;
-    alt = images[idx].alt;
-    caption = images[idx].txt;
+    const url = images[idx].src;
+    const alt = images[idx].alt;
+    const caption = images[idx].txt;
 
     const img = document.getElementById('image-view-img');
     img.src = url;

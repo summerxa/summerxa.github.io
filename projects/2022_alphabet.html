@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../style.css">
 <script src="../page_transition.js" defer></script>
 <title>Alphabet Interpreter | Anne Xia</title>
@@ -19,7 +21,7 @@
 
 <div id="image-view">
     <div id="image-view-img-container">
-        <image id="image-view-img"/>
+        <img id="image-view-img" alt=""/>
     </div>
     <div id="image-view-text">
         <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
@@ -44,19 +46,19 @@
     </div>
     <div class="content1 internal">
 
-        <h1>Alphabet Interpreter</h1>
+        <div style="display: flex; gap: 20px; align-items: baseline;">
+            <h1>Alphabet Interpreter</h1>
+            <h4><a href="https://github.com/summerxa/asl-ai-app">GitHub</a></h4>
+        </div>
+
         <p><em>Jun-Aug 2022</em> | Java, Python, Machine learning, Android development</p>
 
-        <p>Created by Anne Xia as an independent project.</p>
-
-        <p>Android app written in Java, utilizes AI to identify ASL alphabet signs from live camera feed.</p>
+        <p>Independent project. Android app written in Java, utilizes AI to identify ASL alphabet signs from live camera feed.</p>
 
         <p>Training data used photos of hand gestures taken from online databases. Model connected OpenCV, MediaPipe, and 4-layer fully-connected neural network
             and was trained to classify hand gesture images as letters.
-        Used Python to train and test model, integrated final model into mobile app.
+            Used Python to train and test model, integrated final model into mobile app.
         </p>
-
-        <p><a href="https://github.com/summerxa/asl-ai-app">GitHub link</a></p>
 
         <div id="image-gallery"></div>
     </div>
