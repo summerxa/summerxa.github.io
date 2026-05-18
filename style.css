@@ -97,15 +97,11 @@ ul {
     padding-left: 1.2rem;
 }
 
-li {
-    margin-bottom: 0.45rem;
-}
-
 hr {
     width: 100%;
     margin: 1.6rem 0;
     border: 0;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--muted);
 }
 
 .bg-transition-overlay {

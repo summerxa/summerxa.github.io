@@ -5,13 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../style.css">
 <script src="../page_transition.js" defer></script>
-<title>Internship @ Everpure | Anne Xia</title>
+<title>Dev @ Cornell CMSX | Anne Xia</title>
 </head>
 <style>
     html {
-        background:
-            radial-gradient(circle at top left, rgba(143, 198, 255, 0.22), transparent 32rem),
-            linear-gradient(135deg, #101827 0%, #1e2d44 52%, #263d45 100%);
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/ongoing_cmsx/cmsx_0.png) no-repeat center center fixed;
     }
 </style>
 <body>
@@ -43,29 +41,48 @@
         </div>
         <div class="content1 internal">
             <div style="display: flex; gap: 20px; align-items: baseline;">
-                <h1>Internship @ Everpure</h1>
+                <h1>Dev @ Cornell CMSX</h1>
+                <h4><a href="https://www.cs.cornell.edu/projects/cms/cmsx/">Project website</a></h4>
             </div>
-            <p><em>May-Aug 2025</em> | ML, Python </p>
+            <p><em>Jan 2025-Present</em> | Java, Full-stack development </p>
 
             <p>
-                TODO description
+                Cornell CMSX is a course management system used by over 100 courses at Cornell University.
             </p>
 
             <div>
                 <p>
                 My main contributions:
                     <ul>
-                        <li>Developed AI triaging assistant in Python, utilized various ML and NLP techniques
-                            (XGBoost, SentenceTransformer, etc) to improve assistant's training efficiency
-                            and overall performance.</li>
-                        <li>Achieved F1-score of up to 77% on triaging assistant model.</li>
+                        <li>TODO</li>
                     </ul>
                 </p>
             </div>
 
+            <div id="image-gallery"></div>
         </div>
     </div>
 </div>
+
+<script src="../gallery_script.js"></script>
+<script>
+const images = [
+    {
+        "src": "../img/ongoing_cmsx/cmsx_0.png",
+        "alt": "Login page for Cornell CMSX.",
+        "txt": "The login page for Cornell CMSX.",
+        "i": 0
+    },
+    {
+        "src": "../img/ongoing_cmsx/cmsx_1.png",
+        "alt": "The homepage for a single course from the student side.",
+        "txt": "The homepage for a single course from the student side.",
+        "i": 1
+    }
+];
+
+buildGallery(images);
+</script>
 
 </body>
 

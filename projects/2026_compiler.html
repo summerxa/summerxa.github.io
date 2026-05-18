@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<script src="../page_transition.js" defer></script>
+<title>Eta Compiler | Anne Xia</title>
+</head>
+<style>
+    html {
+        background:
+            radial-gradient(circle at top left, rgba(143, 198, 255, 0.22), transparent 32rem),
+            linear-gradient(135deg, #101827 0%, #1e2d44 52%, #263d45 100%);
+    }
+</style>
+<body>
+
+<div id="image-view">
+    <div id="image-view-img-container">
+        <img id="image-view-img" alt=""/>
+    </div>
+    <div id="image-view-text">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; align-items:center; height: 6%">
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label">Image 1/5</p>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <div class="content1 back">
+            <a onclick="history.back()">Back</a>
+        </div>
+        <div class="content1 internal">
+            <div style="display: flex; gap: 20px; align-items: baseline;">
+                <h1>Eta Compiler</h1>
+            </div>
+            <p><em>Spring 2026</em> | Kotlin, Compiler design </p>
+
+            <p>
+                Created by Anne Xia, Farhan Naqib, Matthew Kim, and Paul Fischer at Cornell University. Final project for
+                <a href="https://courses.cs.cornell.edu/cs4120/2026sp/">CS 4121: Practicum in Compilers</a>,
+                taught by Professor Andrew Myers for Spring 2026.
+            </p>
+
+            <p>
+                A compiler written in Kotlin for Eta, an imperative C-like programming language.
+                Compiling an Eta program involves multiple steps: lexing, parsing, typechecking,
+                intermediate representation (IR) generation, and finally
+                assembly (ASM) code generation.
+            </p>
+
+            <p>
+                We also implemented the following optimizations:
+                copy and constant propagation, constant folding, global value numbering, common subexpression elimination,
+                tail-call optimization, function inlining, dead/redundant code elimination, register allocation,
+                and move coalescing.
+            </p>
+
+            <div>
+                <p>
+                My main contributions:
+                    <ul>
+                        <li>TODO</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                For more details, the language specifications are as follows:
+                <ul>
+                    <li><a href="https://www.cs.cornell.edu/courses/cs4120/2026sp/project/language.pdf?1776176909">Eta specification</a></li>
+                    <li><a href="https://www.cs.cornell.edu/courses/cs4120/2026sp/project/rlang.pdf?1777388921">Rho specification</a>
+                            (an extension to Eta with nulls and record types)</li>
+                </ul>
+            </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
