@@ -69,6 +69,10 @@ hr {
     z-index: 1;
 }
 
+.homepage_content {
+    animation: page-fade-in 0.5s ease;
+}
+
 .content {
     animation: page-fade-in 0.5s ease;
 }
