@@ -19,7 +19,7 @@ h1 {
 }
 
 hr {
-    max-width: 50%;
+    width: 99%;
     color: black;
 }
 
@@ -54,6 +54,17 @@ hr {
 }
 
 @media (orientation: landscape) {
+    .homepage_content {
+        justify-self: center;
+        align-self: center;
+        width: 75%;
+        max-height: 90%;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        overflow: auto;
+    }
+
     .content {
         justify-self: center;
         align-self: center;
@@ -88,6 +99,17 @@ hr {
 }
 
 @media (orientation: portrait) {
+    .homepage_content {
+        justify-self: center;
+        align-self: center;
+        width: 90%;
+        max-height: 90%;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        overflow: auto;
+    }
+
     .content {
         justify-self: center;
         align-self: center;
