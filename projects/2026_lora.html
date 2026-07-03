@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<script src="../page_transition.js" defer></script>
+<title>LoRA: Low-Rank Adaptation on RoBERTa-base | Anne Xia</title>
+</head>
+<style>
+    html {
+        background:
+            radial-gradient(circle at top left, rgba(143, 198, 255, 0.22), transparent 32rem),
+            linear-gradient(135deg, #101827 0%, #1e2d44 52%, #263d45 100%);
+    }
+</style>
+<body>
+
+<div id="image-view">
+    <div id="image-view-img-container">
+        <img id="image-view-img" alt=""/>
+    </div>
+    <div id="image-view-text">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; align-items:center; height: 6%">
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label">Image 1/5</p>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <div class="content1 back">
+            <a href="../index.html">Home</a>
+        </div>
+        <div class="content1 internal">
+            <div style="display: flex; gap: 20px; align-items: baseline;">
+                <h1>LoRA Re-implementation</h1>
+                <h4><a href="https://github.com/elliottlin5470/CS4782-Final-Project/">GitHub</a> |
+                <a href="https://github.com/elliottlin5470/CS4782-Final-Project/blob/main/report/LoRA_2page_report.pdf">Writeup</a> |
+                <a href="https://github.com/elliottlin5470/CS4782-Final-Project/blob/main/poster/LoRA_Poster.pdf">Poster</a>
+                </h4>
+            </div>
+            <p><em>Spring 2026</em> | ML, Python</p>
+
+            <p>Created by Anne Xia, Elliott Lin, Trisha Saini, Samarth Shridhar at Cornell University. Final project for
+                <a href="https://www.cs.cornell.edu/courses/cs4782/2026sp/">CS 4782</a>,
+                taught by Professors Kilian Q. Weinberger and Wei-Chiu Ma for Spring 2026.</p>
+
+            <p>
+                A re-implementation of <em>LoRA: Low-Rank Adaptation of Large Language Models</em>
+                (Hu et al., 2021, <a href="https://arxiv.org/abs/2106.09685">arXiv:2106.09685</a>).
+            </p>
+
+            <p>
+                The LoRA adapter reduces the number of trainable parameters needed to fine-tune a pre-trained ML model
+                for a specific task while maintaining strong model performance.
+                We focused on using LoRA to adapt Facebook AI's pre-trained <b>RoBERTa-base</b> model for sentiment classification
+                on the <b>Stanford Sentiment Treebank (SST-2)</b> dataset.
+            </p>
+
+            <div>
+                <p>
+                My main contributions:
+                    <ul>
+                        <li>Implemented full training/validation and testing cycle with checkpointing and
+                            automatic backup to cloud storage.
+                            Implemented and debugged model class connecting RoBERTa-base model to LoRA adapter.</li>
+                        <li>Independently developed and tested research hypotheses going beyond results stated in the paper.</li>
+                        <li>Presented findings at course's final research panel.</li>
+                        <li>Coordinated team discussions and to-dos to ensure on-time delivery of project milestones.</li>
+                    </ul>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
