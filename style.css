@@ -567,10 +567,6 @@ video {
         font-size: 1.45rem;
     }
 
-    .content1.internal.index .hero-header .eyebrow {
-        display: none;
-    }
-
     #project-div {
         grid-template-columns: 1fr;
     }
