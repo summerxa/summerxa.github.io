@@ -56,15 +56,11 @@
                 taught by Professors Kilian Q. Weinberger and Wei-Chiu Ma for Spring 2026.</p>
 
             <p>
-                A re-implementation of <em>LoRA: Low-Rank Adaptation of Large Language Models</em>
+                A re-implementation and further exploration of <em>LoRA: Low-Rank Adaptation of Large Language Models</em>
                 (Hu et al., 2021, <a href="https://arxiv.org/abs/2106.09685">arXiv:2106.09685</a>).
-            </p>
-
-            <p>
-                The LoRA adapter reduces the number of trainable parameters needed to fine-tune a pre-trained ML model
-                for a specific task while maintaining strong model performance.
                 We focused on using LoRA to adapt Facebook AI's pre-trained <b>RoBERTa-base</b> model for sentiment classification
-                on the <b>Stanford Sentiment Treebank (SST-2)</b> dataset.
+                on the <b>Stanford Sentiment Treebank (SST-2)</b> dataset, and investigating the interaction between
+                two of the LoRA adapter's scaling hyperparameters.
             </p>
 
             <div>
@@ -77,6 +73,19 @@
                         <li>Independently developed and tested research hypotheses going beyond results stated in the paper.</li>
                         <li>Presented findings at course's final research panel.</li>
                         <li>Coordinated team discussions and to-dos to ensure on-time delivery of project milestones.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                Technologies used:
+                    <ul>
+                        <li>RoBERTa-base model from Facebook AI.</li>
+                        <li>Stanford Sentiment Treebank v2 dataset from Stanford NLP.</li>
+                        <li>HuggingFace to source base model, tokenizer, and dataset.</li>
+                        <li>PyTorch for model architecture, training, validation, and testing.</li>
+                        <li>Google Colab for code share, cloud compute, and integration with Google Drive for cloud sync.</li>
                     </ul>
                 </p>
             </div>
