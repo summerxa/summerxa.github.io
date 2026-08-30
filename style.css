@@ -464,6 +464,39 @@ body.page-transition-exit .homepage_content {
     filter: brightness(1.03);
 }
 
+.project-page-nav {
+    position: fixed;
+    top: 50%;
+    z-index: 4;
+    display: none;
+    width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+    min-height: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.88);
+    color: var(--ink);
+    font-size: 1.5rem;
+    text-decoration: none;
+    backdrop-filter: blur(14px);
+    transform: translateY(-50%);
+}
+
+.project-page-nav:hover,
+.project-page-nav:focus-visible {
+    color: var(--ink);
+    text-decoration: none;
+    transform: translateY(calc(-50% - 1px));
+}
+
+.project-page-nav-previous {
+    left: max(1rem, calc(50% - 440px - 4.25rem));
+}
+
+.project-page-nav-next {
+    right: max(1rem, calc(50% - 440px - 4.25rem));
+}
+
 .image-btn-ani {
     animation: bounce 0.35s ease;
 }
@@ -537,6 +570,12 @@ video {
     #image-view-text {
         min-width: 0;
         height: 35%;
+    }
+}
+
+@media (min-width: 981px) {
+    .project-page-nav {
+        display: inline-flex;
     }
 }
 

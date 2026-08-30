@@ -10,7 +10,7 @@ const projectPages = [
     },
     {
         title: "Internship @ Roblox",
-        subtitle: "Worked on new features for desktop & mobile app.",
+        subtitle: "New features for desktop & mobile app.",
         skills: ["React", "C#", "Full-stack development"],
         imagePath: "img/2026_roblox/roblox_icon.jpg",
         imageAlt: "Roblox logo with stylized background",
