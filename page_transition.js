@@ -1,6 +1,8 @@
 (function () {
     const previousBackgroundKey = "annePreviousBackground";
+    const projectSlideDirectionKey = "anneProjectSlideDirection";
     const transitionDelay = 150;
+    const projectSlideTransitionDelay = 260;
 
     function getPageBackground() {
         const style = window.getComputedStyle(document.documentElement);
@@ -30,6 +32,29 @@
         } catch (error) {
             return;
         }
+    }
+
+    function getProjectSlideDirection() {
+        try {
+            const direction = sessionStorage.getItem(projectSlideDirectionKey);
+
+            if (direction === "previous" || direction === "next") {
+                return direction;
+            }
+        } catch (error) {
+            return "";
+        }
+
+        return "";
+    }
+
+    function clearProjectSlideClasses() {
+        document.body.classList.remove(
+            "project-slide-enter-next",
+            "project-slide-enter-previous",
+            "project-slide-exit-next",
+            "project-slide-exit-previous"
+        );
     }
 
     function showPreviousBackground() {
@@ -66,6 +91,21 @@
         });
     }
 
+    function applyProjectSlideInOnce() {
+        let direction = "";
+
+        try {
+            direction = getProjectSlideDirection();
+            sessionStorage.removeItem(projectSlideDirectionKey);
+        } catch (error) {
+            return;
+        }
+
+        if (direction) {
+            document.body.classList.add("project-slide-enter-" + direction);
+        }
+    }
+
     function isInternalPageLink(link) {
         if (link.hash || link.target || link.hasAttribute("download")) {
             return false;
@@ -84,14 +124,22 @@
 
     window.transitionToPage = function (url) {
         saveCurrentBackground();
-        document.body.classList.add("page-transition-exit");
+        const projectSlideDirection = getProjectSlideDirection();
+
+        if (projectSlideDirection) {
+            clearProjectSlideClasses();
+            document.body.classList.add("project-slide-exit-" + projectSlideDirection);
+        } else {
+            document.body.classList.add("page-transition-exit");
+        }
 
         window.setTimeout(function () {
             window.location.href = url;
-        }, transitionDelay);
+        }, projectSlideDirection ? projectSlideTransitionDelay : transitionDelay);
     };
 
     document.addEventListener("DOMContentLoaded", function () {
+        applyProjectSlideInOnce();
         showPreviousBackground();
 
         document.querySelectorAll("a[href]").forEach(function (link) {
@@ -105,6 +153,18 @@
             });
         });
     });
+
+    window.slideProjectPageOnNextNavigation = function (direction) {
+        if (direction !== "previous" && direction !== "next") {
+            return;
+        }
+
+        try {
+            sessionStorage.setItem(projectSlideDirectionKey, direction);
+        } catch (error) {
+            return;
+        }
+    };
 
     window.addEventListener("pagehide", saveCurrentBackground);
 })();

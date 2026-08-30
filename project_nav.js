@@ -16,6 +16,11 @@ function createProjectNavLink(project, direction) {
     link.href = window.sitePath(project.projectPage);
     link.setAttribute("aria-label", direction === "previous" ? "Previous project: " + project.title : "Next project: " + project.title);
     link.textContent = direction === "previous" ? "<" : ">";
+    link.addEventListener("click", function () {
+        if (window.slideProjectPageOnNextNavigation) {
+            window.slideProjectPageOnNextNavigation(direction);
+        }
+    });
 
     return link;
 }
