@@ -46,7 +46,7 @@ const projectPages = [
     },
     {
         title: "After Eve",
-        subtitle: "An action roguelite and narrative game.",
+        subtitle: "A bullet hell roguelite and narrative game.",
         skills: ["Unity", "C#", "Game development"],
         imagePath: "img/2026_aftereve/AE_cover.jpg",
         imageAlt: "After Eve game banner",
@@ -73,7 +73,7 @@ const projectPages = [
     },
     {
         title: "The Scarcity Line",
-        subtitle: "A puzzle game about hunger, food waste, and food scarcity.",
+        subtitle: "A puzzle game about hunger and food waste.",
         skills: ["Unity", "C#", "Game development"],
         imagePath: "img/2025_scarcityline/line_cover.png",
         imageAlt: "The Scarcity Line cover art",
@@ -91,7 +91,7 @@ const projectPages = [
     },
     {
         title: "Time Keeper",
-        subtitle: "A management sim about balancing tasks and time.",
+        subtitle: "A management sim and narrative game.",
         skills: ["Python", "Game development"],
         imagePath: "img/2024_timekeeper/tk_0.png",
         imageAlt: "Time Keeper main menu",
