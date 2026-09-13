@@ -1,8 +1,10 @@
 function createProjectButton(project, basePath = "") {
     const button = document.createElement("a");
     button.className = "project-btn";
-    button.href = window.sitePath(project.projectPage, basePath || undefined);
-    button.setAttribute("aria-label", project.ariaLabel);
+    if (project.projectPage != null) {
+        button.href = window.sitePath(project.projectPage, basePath || undefined);
+        button.setAttribute("aria-label", project.ariaLabel);
+    }
 
     const image = document.createElement("img");
     image.className = "project-image";

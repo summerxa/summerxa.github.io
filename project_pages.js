@@ -9,6 +9,15 @@ const projectPages = [
         ariaLabel: "Open Cornell CMSX project"
     },
     {
+        title: "SituAlert [Page under construction]",
+        subtitle: "A mobile app that scans and responds to natural disasters using agentic AI.",
+        skills: ["Java", "Full-stack development"],
+        imagePath: "img/2026_situalert/situalert_logo.png",
+        imageAlt: "SituAlert app logo",
+        // projectPage: "projects/ongoing_cmsx.html",
+        ariaLabel: "Open SituAlert project"
+    },
+    {
         title: "Internship @ Roblox",
         subtitle: "New features for desktop & mobile app.",
         skills: ["React", "C#", "Full-stack development"],
@@ -63,6 +72,15 @@ const projectPages = [
         ariaLabel: "Open Eta Compiler project"
     },
     {
+        title: "The Scarcity Line",
+        subtitle: "An award-winning puzzle game about hunger and food waste.",
+        skills: ["Unity", "C#", "Game development"],
+        imagePath: "img/2025_scarcityline/line_cover.png",
+        imageAlt: "The Scarcity Line cover art",
+        projectPage: "projects/2025_scarcityline.html",
+        ariaLabel: "Open The Scarcity Line project"
+    },
+    {
         title: "Function Dungeon",
         subtitle: "A procedurally generated dungeon crawler.",
         skills: ["OCaml"],
@@ -70,15 +88,6 @@ const projectPages = [
         imageAlt: "Function Dungeon gameplay screenshot",
         projectPage: "projects/2025_functiondungeon.html",
         ariaLabel: "Open Function Dungeon project"
-    },
-    {
-        title: "The Scarcity Line",
-        subtitle: "A puzzle game about hunger and food waste.",
-        skills: ["Unity", "C#", "Game development"],
-        imagePath: "img/2025_scarcityline/line_cover.png",
-        imageAlt: "The Scarcity Line cover art",
-        projectPage: "projects/2025_scarcityline.html",
-        ariaLabel: "Open The Scarcity Line project"
     },
     {
         title: "Critter World",
