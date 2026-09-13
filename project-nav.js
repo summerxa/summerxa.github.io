@@ -20,14 +20,14 @@ function navigableProjects(projects) {
 
 function currentProjectGroup() {
     const groups = [
-        window.workExperiencePages,
-        window.projectPages,
-        window.projectArchivePages
+        { projects: window.workExperiencePages, backPage: "index.html" },
+        { projects: window.projectPages, backPage: "index.html" },
+        { projects: window.projectArchivePages, backPage: "project-archive.html" }
     ];
 
-    return groups.find(function (projects) {
-        return Array.isArray(projects) && currentProjectIndex(navigableProjects(projects)) !== -1;
-    }) || [];
+    return groups.find(function (group) {
+        return Array.isArray(group.projects) && currentProjectIndex(navigableProjects(group.projects)) !== -1;
+    }) || { projects: [], backPage: "index.html" };
 }
 
 function createProjectNavLink(project, direction, enabled) {
@@ -66,13 +66,24 @@ function projectNavContainer() {
     return navContainer;
 }
 
+function updateBackLink(backPage) {
+    const backLink = document.querySelector(".back-link");
+
+    if (backLink) {
+        backLink.href = window.sitePath(backPage);
+    }
+}
+
 function renderProjectPageNav() {
-    const projects = navigableProjects(currentProjectGroup());
+    const projectGroup = currentProjectGroup();
+    const projects = navigableProjects(projectGroup.projects);
     const index = currentProjectIndex(projects);
 
     if (index === -1) {
         return;
     }
+
+    updateBackLink(projectGroup.backPage);
 
     const navContainer = projectNavContainer();
     const previousProject = projects[index - 1];

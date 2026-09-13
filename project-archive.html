@@ -15,29 +15,18 @@
 </head>
 <style>
     html {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/homepage-bgs/trees.jpg) no-repeat center center fixed;
+        background:
+            radial-gradient(circle at top left, rgba(143, 198, 255, 0.22), transparent 32rem),
+            linear-gradient(135deg, #101827 0%, #1e2d44 52%, #263d45 100%);
     }
 </style>
-<script>
-    (function () {
-        const homepageBackgrounds = [
-            "img/homepage-bgs/birds.jpg",
-            "img/homepage-bgs/ocean.jpg",
-            "img/homepage-bgs/trees.jpg"
-        ];
-        const background = homepageBackgrounds[Math.floor(Math.random() * homepageBackgrounds.length)];
-
-        document.documentElement.style.background =
-            "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(" + background + ") no-repeat center center fixed";
-    })();
-</script>
 <body>
 
 <div class="container">
 <div class="homepage_content">
     <div class="content1 internal index">
         <div class="hero-header">
-            <a href="index.html" class="back-link" aria-label="Back">&lt; Back</a>
+            <a href="#" class="back-link" aria-label="Back">&lt; Back</a>
         </div>
 
         <p class="intro">
