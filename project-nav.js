@@ -30,19 +30,36 @@ function currentProjectGroup() {
     }) || [];
 }
 
-function createProjectNavLink(project, direction) {
+function createProjectNavLink(project, direction, enabled) {
     const link = document.createElement("a");
     link.className = "image-btn project-page-nav project-page-nav-" + direction;
-    link.href = window.sitePath(project.projectPage);
-    link.setAttribute("aria-label", direction === "previous" ? "Previous project: " + project.title : "Next project: " + project.title);
     link.textContent = direction === "previous" ? "<" : ">";
-    link.addEventListener("click", function () {
-        if (window.slideProjectPageOnNextNavigation) {
-            window.slideProjectPageOnNextNavigation(direction);
-        }
-    });
+    link.enabled = enabled;
+    if (enabled) {
+        link.href = window.sitePath(project.projectPage);
+        link.setAttribute("aria-label", direction === "previous" ? "Previous project: " + project.title : "Next project: " + project.title);
+        link.addEventListener("click", function () {
+            if (window.slideProjectPageOnNextNavigation) {
+                window.slideProjectPageOnNextNavigation(direction);
+            }
+        });
+    }
 
     return link;
+}
+
+function projectNavContainer() {
+    const topBar = document.querySelector(".content1.back, .hero-header");
+
+    if (!topBar) {
+        return null;
+    }
+
+    const navContainer = document.createElement("div");
+    navContainer.className = "project-page-nav-group";
+    topBar.appendChild(navContainer);
+
+    return navContainer;
 }
 
 function renderProjectPageNav() {
@@ -53,15 +70,24 @@ function renderProjectPageNav() {
         return;
     }
 
+    const navContainer = projectNavContainer();
     const previousProject = projects[index - 1];
     const nextProject = projects[index + 1];
 
+    if (!navContainer) {
+        return;
+    }
+
     if (previousProject) {
-        document.body.appendChild(createProjectNavLink(previousProject, "previous"));
+        navContainer.appendChild(createProjectNavLink(previousProject, "previous", true));
+    } else {
+        navContainer.appendChild(createProjectNavLink(null, "previous", false));
     }
 
     if (nextProject) {
-        document.body.appendChild(createProjectNavLink(nextProject, "next"));
+        navContainer.appendChild(createProjectNavLink(nextProject, "next", true));
+    } else {
+        navContainer.appendChild(createProjectNavLink(null, "next", false));
     }
 }
 
