@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<script src="../page-transition.js" defer></script>
+<script src="../project-pages.js" defer></script>
+<script src="../project-archive-pages.js" defer></script>
+<script src="../project-nav.js" defer></script>
+<title>The Weaver | Anne Xia</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
+</head>
+<style>
+    html {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2025-weaver/weaver-1.png) no-repeat center center fixed; 
+    }
+</style>
+<body>
+
+<div id="image-view">
+    <div id="image-view-img-container">
+        <img id="image-view-img" alt=""/>
+    </div>
+    <div id="image-view-text">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; align-items:center; height: 6%">
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label"></p>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="content">
+    <div class="content1 back">
+        <a href="../project-archive.html" class="back-link" aria-label="Back">&lt; Back</a>
+    </div>
+    <div class="content1 internal">
+
+        <div style="display: flex; gap: 20px; align-items: baseline;">
+            <h1>The Weaver</h1>
+            <h4><a href="https://github.com/yzhang-570/Coreblazer-thesequel">GitHub</a> | <a href="https://axl012.itch.io/the-weaver">Play on Itch.io</a></h4>
+        </div>
+        <p><em>May-Jun 2025</em> | Unity, C#, Game development </p>
+
+        <p>
+            A 3D puzzle-adventure game, created by a team of 4 student developers.
+            Built in 2 weeks for
+            <a href="https://itch.io/jam/tgcxcoreblazer/rate/3620738">thatgamecompany x COREBLAZER GAME JAM 2025</a>.
+        </p>
+
+        <hr>
+
+        <p>
+            For this game, I worked on a boolean puzzle where two puzzle pieces visually "cancel out" when overlapping;
+            this effect was achieved using Unity shaders.
+        </p>
+
+        <p>
+            I also worked on adding VFX/particle effects to enhance the story. In this game, whenever the player interacts
+            with an NPC, they can choose to either take the NPC's memories or share their own memories with the NPC.
+            If the player decides to take an NPC's memories, the NPC will dissolve into particles and fade away,
+            giving the player's action a more heavy consequence. I worked on the VFX for this transition.
+        </p>
+
+        <div id="image-gallery"></div>
+    </div>
+</div>
+</div>
+
+</body>
+
+<script src="../gallery-script.js"></script>
+<script>
+const images = [
+    {
+        "src": "../img/2025-weaver/weaver-0.png",
+        "alt": "Screenshot of the game.",
+        "txt": "Screenshot of the game.",
+        "i": 0
+    },
+    {
+        "src": "../img/2025-weaver/weaver-1.png",
+        "alt": "Screenshot of the game.",
+        "txt": "Screenshot of the game.",
+        "i": 1
+    },
+    {
+        "src": "../img/2025-weaver/weaver-2.png",
+        "alt": "Screenshot of the boolean puzzle.",
+        "txt": "Screenshot of the boolean puzzle. Dragging one puzzle piece (shape) over the other will create a \"mask\" that causes the overlapping parts to visually disappear. However, the pieces can still be dragged normally even if they appear to be cut off.",
+        "i": 2
+    },
+    {
+        "src": "../img/2025-weaver/weaver-3.png",
+        "alt": "Still from the opening cutscene.",
+        "txt": "Still from the opening cutscene.",
+        "i": 3
+    },
+];
+
+buildGallery(images);
+</script>
+
+</html>

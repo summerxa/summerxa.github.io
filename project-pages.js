@@ -57,6 +57,15 @@ const projectPages = [
         ariaLabel: "Open LoRA project"
     },
     {
+        title: "After Eve",
+        subtitle: "A bullet hell roguelite and narrative game in development.",
+        skills: ["Unity", "C#", "Game development"],
+        imagePath: "img/2026-after-eve/ae-cover.jpg",
+        imageAlt: "After Eve game banner",
+        projectPage: "projects/2026-after-eve.html",
+        ariaLabel: "Open After Eve project"
+    },
+    {
         title: "The Scarcity Line",
         subtitle: "An award-winning puzzle game about hunger and food waste.",
         skills: ["Unity", "C#", "Game development"],
@@ -64,6 +73,15 @@ const projectPages = [
         imageAlt: "The Scarcity Line cover art",
         projectPage: "projects/2025-scarcity-line.html",
         ariaLabel: "Open The Scarcity Line project"
+    },
+    {
+        title: "Critter World",
+        subtitle: "A real-time ecosystem simulator where programmable critters evolve on a grid.",
+        skills: ["Java", "UI", "Multithreading", "MVC"],
+        imagePath: "img/2024-critter-world/critter-0.png",
+        imageAlt: "Critter World GUI screenshot",
+        projectPage: "projects/2024-critter-world.html",
+        ariaLabel: "Open Critter World project"
     },
     {
         title: "Miscellaneous",
