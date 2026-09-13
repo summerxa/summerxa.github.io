@@ -1,13 +1,5 @@
-const projectPages = [
-    {
-        title: "Eta Compiler",
-        subtitle: "A compiler for Eta, an imperative C-like programming language.",
-        skills: ["Kotlin", "Compiler design"],
-        imagePath: "img/2026-compiler/eta.png",
-        imageAlt: "The Greek letter eta",
-        projectPage: "projects/2026-compiler.html",
-        ariaLabel: "Open Eta Compiler project"
-    },
+(function () {
+const projectArchivePages = [
     {
         title: "After Eve",
         subtitle: "A bullet hell roguelite and narrative game.",
@@ -16,6 +8,15 @@ const projectPages = [
         imageAlt: "After Eve game banner",
         projectPage: "projects/2026-after-eve.html",
         ariaLabel: "Open After Eve project"
+    },
+    {
+        title: "Eta Compiler",
+        subtitle: "A compiler for Eta, an imperative C-like programming language.",
+        skills: ["Kotlin", "Compiler design"],
+        imagePath: "img/2026-compiler/eta.png",
+        imageAlt: "The Greek letter eta",
+        projectPage: "projects/2026-compiler.html",
+        ariaLabel: "Open Eta Compiler project"
     },
     {
         title: "Function Dungeon",
@@ -61,5 +62,7 @@ function sitePath(path, baseUrl = siteRoot) {
     return new URL(path, baseUrl).href;
 }
 
-window.projectPages = projectPages;
-window.sitePath = sitePath;
+window.projectArchivePages = projectArchivePages;
+window.projectPages = window.projectPages || projectArchivePages;
+window.sitePath = window.sitePath || sitePath;
+})();

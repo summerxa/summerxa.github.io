@@ -10,6 +10,26 @@ function currentProjectIndex(projects) {
     });
 }
 
+function navigableProjects(projects) {
+    return projects.filter(function (project) {
+        const projectPage = normalizedPath(project.projectPage || "");
+
+        return /^projects\//.test(projectPage) || projectPage === "project-archive.html";
+    });
+}
+
+function currentProjectGroup() {
+    const groups = [
+        window.workExperiencePages,
+        window.projectPages,
+        window.projectArchivePages
+    ];
+
+    return groups.find(function (projects) {
+        return Array.isArray(projects) && currentProjectIndex(navigableProjects(projects)) !== -1;
+    }) || [];
+}
+
 function createProjectNavLink(project, direction) {
     const link = document.createElement("a");
     link.className = "image-btn project-page-nav project-page-nav-" + direction;
@@ -26,7 +46,7 @@ function createProjectNavLink(project, direction) {
 }
 
 function renderProjectPageNav() {
-    const projects = window.projectPages || [];
+    const projects = navigableProjects(currentProjectGroup());
     const index = currentProjectIndex(projects);
 
     if (index === -1) {

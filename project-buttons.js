@@ -43,7 +43,8 @@ function createProjectButton(project, basePath = "") {
 
 function renderProjectButtons(container, options = {}) {
     const basePath = options.basePath || "";
-    const projects = options.projects || window.projectPages;
+    const projectListName = container.dataset.projectList;
+    const projects = options.projects || window[projectListName] || window.projectPages;
     const fragment = document.createDocumentFragment();
 
     projects.forEach(function (project) {
@@ -55,8 +56,6 @@ function renderProjectButtons(container, options = {}) {
 
 window.renderProjectButtons = renderProjectButtons;
 
-const projectContainer = document.getElementById("project-div");
-
-if (projectContainer) {
+document.querySelectorAll("[data-project-list], #project-div").forEach(function (projectContainer) {
     renderProjectButtons(projectContainer);
-}
+});
