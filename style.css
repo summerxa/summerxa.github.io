@@ -187,6 +187,25 @@ body.project-slide-enter-previous .content {
     font-size: 0.92rem;
 }
 
+.arrow-link {
+    width: max-content;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.2;
+}
+
+.section-header {
+    display: flex;
+    margin-bottom: 0.55rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.section-header .section-label {
+    margin-bottom: 0;
+}
+
 .content1.back a::before {
     content: "< ";
 }
@@ -238,7 +257,7 @@ body.project-slide-enter-previous .content {
 .section-label {
     margin-bottom: 0.55rem;
     color: var(--accent-strong);
-    font-size: 0.78rem;
+    font-size: 0.92rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     line-height: 1.2;
