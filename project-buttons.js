@@ -1,9 +1,18 @@
+function isExternalUrl(url) {
+    return /^https?:\/\//i.test(url);
+}
+
 function createProjectButton(project, basePath = "") {
     const button = document.createElement("a");
     button.className = "project-btn";
     if (project.projectPage != null) {
         button.href = window.sitePath(project.projectPage, basePath || undefined);
         button.setAttribute("aria-label", project.ariaLabel);
+
+        if (isExternalUrl(project.projectPage)) {
+            button.target = "_blank";
+            button.rel = "noopener noreferrer";
+        }
     }
 
     const image = document.createElement("img");

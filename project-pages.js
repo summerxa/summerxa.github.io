@@ -9,12 +9,12 @@ const projectPages = [
         ariaLabel: "Open Cornell CMSX project"
     },
     {
-        title: "SituAlert [Page under construction]",
+        title: "SituAlert [Page coming soon!]",
         subtitle: "A mobile app that scans and responds to natural disasters using agentic AI.",
         skills: ["Java", "Full-stack development"],
         imagePath: "img/2026-situalert/situalert-logo.png",
         imageAlt: "SituAlert app logo",
-        // projectPage: "projects/ongoing-cmsx.html",
+        projectPage: "https://github.com/summerxa/SituAlert",
         ariaLabel: "Open SituAlert project"
     },
     {
