@@ -67,7 +67,7 @@ const projectPages = [
     },
     {
         title: "Miscellaneous",
-        subtitle: "Projects that are older, just-for-fun, or experimental.",
+        subtitle: "Other cool things I've worked on.",
         skills: [],
         imagePath: "img/2025-function-dungeon/func-0.png",
         imageAlt: "Function Dungeon gameplay screenshot",

@@ -34,7 +34,7 @@ function createProjectNavLink(project, direction, enabled) {
     const link = document.createElement("a");
     link.className = "image-btn project-page-nav project-page-nav-" + direction;
     link.textContent = direction === "previous" ? "<" : ">";
-    link.enabled = enabled;
+
     if (enabled) {
         link.href = window.sitePath(project.projectPage);
         link.setAttribute("aria-label", direction === "previous" ? "Previous project: " + project.title : "Next project: " + project.title);
@@ -43,6 +43,10 @@ function createProjectNavLink(project, direction, enabled) {
                 window.slideProjectPageOnNextNavigation(direction);
             }
         });
+    } else {
+        link.setAttribute("aria-disabled", "true");
+        link.setAttribute("aria-label", direction === "previous" ? "No previous project" : "No next project");
+        link.tabIndex = -1;
     }
 
     return link;
