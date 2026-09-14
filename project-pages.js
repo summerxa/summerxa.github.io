@@ -1,16 +1,7 @@
 const workExperiencePages = [
     {
-        title: "Cornell CMSX",
-        subtitle: "A course management system used by 100+ courses at Cornell.",
-        skills: ["Java", "Full-stack development"],
-        imagePath: "img/ongoing-cmsx/cornell-logo-circle.png",
-        imageAlt: "Cornell University logo",
-        projectPage: "projects/ongoing-cmsx.html",
-        ariaLabel: "Open Cornell CMSX project"
-    },
-    {
         title: "Internship @ Roblox",
-        subtitle: "New features for desktop & mobile app.",
+        subtitle: "Zero-to-one features for desktop & mobile app.",
         skills: ["React", "C#", "Full-stack development"],
         imagePath: "img/2026-roblox/roblox-icon.jpg",
         imageAlt: "Roblox logo with stylized background",
@@ -25,6 +16,15 @@ const workExperiencePages = [
         imageAlt: "Everpure logo",
         projectPage: "projects/2025-everpure.html",
         ariaLabel: "Open Everpure Internship project"
+    },
+    {
+        title: "Lead @ Cornell CMSX",
+        subtitle: "A course management system used by 100+ courses at Cornell.",
+        skills: ["Java", "Full-stack development"],
+        imagePath: "img/ongoing-cmsx/cornell-logo-circle.png",
+        imageAlt: "Cornell University logo",
+        projectPage: "projects/ongoing-cmsx.html",
+        ariaLabel: "Open Cornell CMSX project"
     },
     {
         title: "Internship @ UC Santa Cruz",
