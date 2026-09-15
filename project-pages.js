@@ -39,12 +39,12 @@ const workExperiencePages = [
 
 const projectPages = [
     {
-        title: "SituAlert [Page coming soon!]",
+        title: "SituAlert",
         subtitle: "A mobile app that scans and responds to natural disasters using agentic AI.",
         skills: ["Agentic AI", "React Native", "Full-stack development"],
         imagePath: "img/2026-situalert/situalert-logo.png",
         imageAlt: "SituAlert app logo",
-        projectPage: "https://github.com/summerxa/SituAlert",
+        projectPage: "projects/2026-situalert.html",
         ariaLabel: "Open SituAlert project"
     },
     {

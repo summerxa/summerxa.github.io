@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<script src="../page-transition.js" defer></script>
+<script src="../project-pages.js" defer></script>
+<script src="../project-archive-pages.js" defer></script>
+<script src="../project-nav.js" defer></script>
+<title>SituAlert | Anne Xia</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
+</head>
+<style>
+    html {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/2026-situalert/situalert-features.png) no-repeat center center fixed; 
+    }
+</style>
+<body>
+
+<div id="image-view">
+    <div id="image-view-img-container">
+        <img id="image-view-img" alt=""/>
+    </div>
+    <div id="image-view-text">
+        <div style="display: flex; width: 100%; flex-direction: row-reverse; height: 4%">
+            <button class="image-btn" id="close" onclick="onCloseClicked()">X</button>
+        </div>
+        <div style="overflow: auto; height: 90%">
+            <p id="image-view-txt">text
+            </p>
+        </div>
+        <div style="display:flex; flex-direction: row; width: 100%; align-self: center; justify-content: space-between; align-items:center; height: 6%">
+            <button class="image-btn" id="left" onclick="onLeftClicked()">&lt;</button>
+            <p id="image-view-label"></p>
+            <button class="image-btn" id="right" onclick="onRightClicked()">&gt;</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="content">
+    <div class="content1 back">
+        <a href="#" class="back-link" aria-label="Back">&lt; Back</a>
+    </div>
+    <div class="content1 internal">
+
+        <div style="display: flex; gap: 20px; align-items: baseline;">
+            <h1>SituAlert</h1>
+            <h4><a href="https://github.com/summerxa/SituAlert">GitHub</a>
+                | <a href="https://devpost.com/software/situalert-3c75va">Devpost</a>
+                | <a href="https://www.youtube.com/watch?v=FGw4GS7OWaw">Video Walkthrough</a></h4>
+        </div>
+        <p><em>Aug-Sep 2026</em> | Agentic AI, React Native, Full-stack development </p>
+
+        <p>
+            A mobile app that detects nearby emergencies and provides AI-powered guidance based on
+            verified, official sources.
+            Worked with a partner to build this app for a 1-month hackathon;
+            I was responsible for developing the backend,
+            as well as implementing networking hooks and UI wireframe on frontend.
+        </p>
+
+        <div>
+            <p>
+            My main contributions:
+                <ul>
+                    <li>Participate in initial product scoping and design, making sure our plans were achievable
+                        within a 1-month timeframe, but also flexible enough to add and remove features as needed.</li>
+                    <li>Architected and implemented backend with Strands Agents SDK for Python.
+                        Deployed with Amazon Bedrock AgentCore for agent hosting, AWS Lambda for invocation,
+                        and Amazon API Gateway for HTTP endpoints.</li>
+                    <li>Set up networking hooks to invoke agents,
+                        retrieve shaped agent output, and populate the mobile app UI.</li>
+                    <li>Summarize our codebase architecture in a readable diagram for the final presentation.
+                        Focused on presenting an explanation that was understandable for a non-technical audience
+                        but also detailed enough to engage technical viewers.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div id="image-gallery"></div>
+    </div>
+</div>
+</div>
+
+</body>
+
+<script src="../gallery-script.js"></script>
+<script>
+const images = [
+    {
+        "src": "../img/2026-situalert/situalert-features.png",
+        "alt": "Product Features: Nearby crisis detection, Personalized action plan, Crisis chatbot",
+        "txt": "Showcase of the main features included in SituAlert.",
+        "i": 0
+    },
+    {
+        "src": "../img/2026-situalert/situalert-homepage.png",
+        "alt": "Screenshot of SituAlert's Home page, showing AI-powered guidance and a mini map based on the user's GPS location.",
+        "txt": "Screenshot of SituAlert's Home page, showing AI-powered guidance and a mini map based on the user's GPS location.",
+        "i": 1
+    },
+    {
+        "src": "../img/2026-situalert/situalert-mappage.png",
+        "alt": "Screenshot of SituAlert's Map page, showing an interactive map with nearby wildfires highlighted.",
+        "txt": "Screenshot of SituAlert's Map page, showing an interactive map with nearby wildfires highlighted.",
+        "i": 2
+    },
+    {
+        "src": "../img/2026-situalert/situalert-chatpage.png",
+        "alt": "Screenshot of SituAlert's Chat page, showing a conversation between the user and chatbot.",
+        "txt": "Screenshot of SituAlert's Chat page, showing a conversation between the user and chatbot.",
+        "i": 3
+    },
+    {
+        "src": "../img/2026-situalert/situalert-architecture.png",
+        "alt": "Architecture diagram for SituAlert.",
+        "txt": "The architecture diagram I worked on for our hackathon presentation.",
+        "i": 4
+    },
+];
+
+buildGallery(images);
+</script>
+
+</html>
