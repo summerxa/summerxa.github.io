@@ -1,13 +1,13 @@
 (function () {
 const projectArchivePages = [
     {
-        title: "Eta Compiler",
-        subtitle: "A compiler for Eta, an imperative C-like programming language. Named best compiler for CS 4120 Spring '26!",
-        skills: ["Kotlin", "Compiler design"],
-        imagePath: "img/2026-compiler/eta.png",
-        imageAlt: "The Greek letter eta",
-        projectPage: "projects/2026-compiler.html",
-        ariaLabel: "Open Eta Compiler project"
+        title: "After Eve",
+        subtitle: "A bullet hell roguelite and narrative game in development.",
+        skills: ["Unity", "C#", "Game development"],
+        imagePath: "img/2026-after-eve/ae-cover.jpg",
+        imageAlt: "After Eve game banner",
+        projectPage: "projects/2026-after-eve.html",
+        ariaLabel: "Open After Eve project"
     },
     {
         title: "The Weaver",
