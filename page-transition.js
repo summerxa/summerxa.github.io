@@ -1,38 +1,7 @@
 (function () {
-    const previousBackgroundKey = "annePreviousBackground";
     const projectSlideDirectionKey = "anneProjectSlideDirection";
     const transitionDelay = 150;
     const projectSlideTransitionDelay = 260;
-
-    function getPageBackground() {
-        const style = window.getComputedStyle(document.documentElement);
-
-        return {
-            image: style.backgroundImage,
-            color: style.backgroundColor,
-            position: style.backgroundPosition,
-            size: style.backgroundSize,
-            repeat: style.backgroundRepeat,
-            attachment: style.backgroundAttachment
-        };
-    }
-
-    function applyBackground(element, background) {
-        element.style.backgroundImage = background.image;
-        element.style.backgroundColor = background.color;
-        element.style.backgroundPosition = background.position;
-        element.style.backgroundSize = background.size;
-        element.style.backgroundRepeat = background.repeat;
-        element.style.backgroundAttachment = background.attachment;
-    }
-
-    function saveCurrentBackground() {
-        try {
-            sessionStorage.setItem(previousBackgroundKey, JSON.stringify(getPageBackground()));
-        } catch (error) {
-            return;
-        }
-    }
 
     function getProjectSlideDirection() {
         try {
@@ -55,40 +24,6 @@
             "project-slide-exit-next",
             "project-slide-exit-previous"
         );
-    }
-
-    function showPreviousBackground() {
-        let previousBackground;
-
-        try {
-            previousBackground = sessionStorage.getItem(previousBackgroundKey);
-            sessionStorage.removeItem(previousBackgroundKey);
-        } catch (error) {
-            return;
-        }
-
-        if (!previousBackground) {
-            return;
-        }
-
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            return;
-        }
-
-        const overlay = document.createElement("div");
-        overlay.className = "bg-transition-overlay";
-
-        try {
-            applyBackground(overlay, JSON.parse(previousBackground));
-        } catch (error) {
-            return;
-        }
-
-        document.body.prepend(overlay);
-
-        overlay.addEventListener("animationend", function () {
-            overlay.remove();
-        });
     }
 
     function applyProjectSlideInOnce() {
@@ -123,7 +58,6 @@
     }
 
     window.transitionToPage = function (url) {
-        saveCurrentBackground();
         const projectSlideDirection = getProjectSlideDirection();
 
         if (projectSlideDirection) {
@@ -140,7 +74,6 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         applyProjectSlideInOnce();
-        showPreviousBackground();
 
         document.querySelectorAll("a[href]").forEach(function (link) {
             link.addEventListener("click", function (event) {
@@ -165,6 +98,4 @@
             return;
         }
     };
-
-    window.addEventListener("pagehide", saveCurrentBackground);
 })();
