@@ -16,6 +16,7 @@ function buildGallery(images) {
         imgElement.setAttribute("role", "button");
         imgElement.setAttribute("aria-label", "View details for " + image.alt);
         imgElement.classList.add("gallery-image");
+        imgElement.loading = 'lazy';
 
         imgElement.addEventListener("click", function() {
             onGalleryClicked(image.i);

@@ -19,6 +19,7 @@ function createProjectButton(project, basePath = "") {
     image.className = "project-image";
     image.src = window.sitePath(project.imagePath, basePath || undefined);
     image.alt = project.imageAlt;
+    image.loading = 'lazy';
 
     const info = document.createElement("span");
     info.className = "project-info";
