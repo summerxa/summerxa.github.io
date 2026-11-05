@@ -17,8 +17,11 @@
         return "";
     }
 
-    function clearProjectSlideClasses() {
+    function clearPageTransitionClasses() {
         document.body.classList.remove(
+            "page-transition-exit",
+            "page-transition-enter",
+            "page-transition-restoring",
             "project-slide-enter-next",
             "project-slide-enter-previous",
             "project-slide-exit-next",
@@ -59,9 +62,9 @@
 
     window.transitionToPage = function (url) {
         const projectSlideDirection = getProjectSlideDirection();
+        clearPageTransitionClasses();
 
         if (projectSlideDirection) {
-            clearProjectSlideClasses();
             document.body.classList.add("project-slide-exit-" + projectSlideDirection);
         } else {
             document.body.classList.add("page-transition-exit");
@@ -71,6 +74,20 @@
             window.location.href = url;
         }, projectSlideDirection ? projectSlideTransitionDelay : transitionDelay);
     };
+
+    window.addEventListener("pageshow", function (event) {
+        if (!event.persisted) {
+            return;
+        }
+
+        // Cached pages retain the exit classes applied before navigation.
+        clearPageTransitionClasses();
+        document.body.classList.add("page-transition-restoring");
+        // Flush the animation reset so repeated history visits replay entry.
+        void document.body.offsetWidth;
+        document.body.classList.remove("page-transition-restoring");
+        document.body.classList.add("page-transition-enter");
+    });
 
     document.addEventListener("DOMContentLoaded", function () {
         applyProjectSlideInOnce();

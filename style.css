@@ -112,6 +112,16 @@ hr {
     animation: background-fade-out 0.6s ease forwards;
 }
 
+body.page-transition-enter .content,
+body.page-transition-enter .homepage_content {
+    animation: page-fade-in 0.5s ease;
+}
+
+body.page-transition-restoring .content,
+body.page-transition-restoring .homepage_content {
+    animation: none;
+}
+
 body.page-transition-exit .content,
 body.page-transition-exit .homepage_content {
     animation: none;
